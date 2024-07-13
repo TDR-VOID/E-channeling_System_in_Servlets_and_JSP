@@ -77,6 +77,7 @@
         <h2>Doctor Channeling Schedule</h2>
         <table>
             <tr>
+                <th>No</th>
                 <th>Doctor ID</th>
                 <th>Channel Number</th>
                 <th>Date</th>
@@ -88,7 +89,7 @@
             <% 
                 // Fetch and display channeling schedules for the logged-in doctor
                 String loggedInDoctorID = (String)request.getSession().getAttribute("loggedInDoctorID");
-                System.out.println("Logged-in Doctor ID: " + loggedInDoctorID);
+                int counter =1; //Initialize counter for row numbering
               
                 try {
                     // Load MySQL JDBC driver and establish connection
@@ -115,6 +116,7 @@
 
                         // Display each schedule row
                         out.println("<tr>");
+                        out.println("<td>" + counter + "</td>");
                         out.println("<td>" + loggedInDoctorID + "</td>");
                         out.println("<td>" + channelNumber + "</td>");
                         out.println("<td>" + date + "</td>");
@@ -123,6 +125,8 @@
                         out.println("<td>" + currentPatients + "</td>");
                         out.println("<td><a href='Doctor_Update.jsp?id=" + channelNumber + "' class='button'>Update</a> | <a href ='Doctor_Delete.jsp?id="+ scheduleID+"'class='button'>Delete</a></td>");
                         out.println("</tr>");
+                        
+                        counter++;
                     }
 
                     // Close connections
