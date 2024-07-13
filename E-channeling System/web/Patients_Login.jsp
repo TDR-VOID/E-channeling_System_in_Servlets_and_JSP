@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Doctor Register Page</title>
+<title>Patients Login Page</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -24,7 +24,7 @@
     display: block;
     margin-bottom: 10px;
   }
-  input[type="text"], input[type="password"], input[type="submit"],input[type="button"] {
+  input[type="text"], input[type="password"], input[type="submit"], input[type="button"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -32,44 +32,34 @@
     border-radius: 4px;
     box-sizing: border-box;
   }
-  
   input[type="submit"], input[type="button"] {
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
   }
-  input[type="submit"]:hover,input[type="button"]:hover {
+  input[type="submit"]:hover, input[type="button"]:hover {
     background-color: #45a049;
   }
 </style>
 <script>
-    function goToLogin(){
-      window.location.href = "Doctor_Login.jsp";
-    }
+  function goToRegister() {
+    window.location.href = "Patients_Register.jsp";
+  }
 </script>
 </head>
 <body>
-<h2>Doctor Register Page</h2>
+<h2>Patients Login Page</h2>
 <form action="Validation.jsp" method="post">
-  <label for="doc_userID">User ID:</label>
-  <input type="text" id="doc_userID" name="doc_userID" required>
-  
-  <label for="doc_name">Name:</label>
-  <input type="text" id="doc_name" name="doc_name" required>
+  <label for="patient_NIC">Patient NIC:</label>
+  <input type="text" id="patient_NIC" name="patient_NIC" required>
   
   <label for="doc_password">Password:</label>
-  <input type="password" id="doc_password" name="doc_password" required>
+  <input type="password" id="patient_password" name="patient_password" required>
   
-  <label for="doc_phone">Phone:</label>
-  <input type="text" id="doc_phone" name="doc_phone" required>
-  
-  <label for="doc_specialization">Specialization:</label>
-  <input type="text" id="doc_specialization" name="doc_specialization" required>
-  
-  <input type="hidden" name="action" value="register">
-  <input type="submit" value="Register">
-  <input type="button" value="Login" onclick="goToLogin()">
+  <input type="hidden" name="action" value="login">
+  <input type="submit" value="Login">
+  <input type="button" value="Register" onclick="goToRegister()">
 </form>
 </body>
 </html>

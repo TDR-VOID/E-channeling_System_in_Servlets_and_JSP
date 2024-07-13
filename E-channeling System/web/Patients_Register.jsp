@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Doctor Register Page</title>
+<title>Patients Register Page</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -45,27 +45,26 @@
 </style>
 <script>
     function goToLogin(){
-      window.location.href = "Doctor_Login.jsp";
+      window.location.href = "Patients_Login.jsp";
     }
 </script>
 </head>
 <body>
-<h2>Doctor Register Page</h2>
+<h2>Patients Register Page</h2>
 <form action="Validation.jsp" method="post">
-  <label for="doc_userID">User ID:</label>
-  <input type="text" id="doc_userID" name="doc_userID" required>
+    
+    <label for="patient_NIC">Patient NIC:</label>
+  <input type="text" id="patient_NIC" name="patient_NIC" required>
   
-  <label for="doc_name">Name:</label>
-  <input type="text" id="doc_name" name="doc_name" required>
+  <label for="patient_name">Name:</label>
+  <input type="text" id="patient_name" name="patient_name" required>
   
-  <label for="doc_password">Password:</label>
-  <input type="password" id="doc_password" name="doc_password" required>
+  <label for="patient_password">Password:</label>
+  <input type="password" id="patient_password" name="patient_password" required>
   
-  <label for="doc_phone">Phone:</label>
-  <input type="text" id="doc_phone" name="doc_phone" required>
+  <label for="patient_phone">Phone:</label>
+  <input type="text" id="patient_phone" name="patient_phone" required>
   
-  <label for="doc_specialization">Specialization:</label>
-  <input type="text" id="doc_specialization" name="doc_specialization" required>
   
   <input type="hidden" name="action" value="register">
   <input type="submit" value="Register">
