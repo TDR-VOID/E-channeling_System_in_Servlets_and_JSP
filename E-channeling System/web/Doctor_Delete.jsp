@@ -5,39 +5,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Channeling Schedule</title>
+    <title>Delete Channeling Schedule</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
         }
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-            position: fixed; /* Fixed to the top */
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
         .container {
             margin-top: 50px;
             padding: 20px;
         }
         table {
-            width: 100%;
+            width: 50%;
             border-collapse: collapse;
             margin-top: 20px;
         }
@@ -50,7 +30,7 @@
             color: white;
         }
         .button {
-            background-color: #4CAF50;
+            background-color: #f44336;
             color: white;
             padding: 8px 12px;
             border: none;
@@ -64,17 +44,8 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="Doctor.jsp">View</a>
-        <a href="Doctor_Add.jsp">Add</a>
-        <a href="Doctor_Update.jsp">Update</a>
-        <a href="Doctor_Delete.jsp">Delete</a>
-        <a href="Doctor_Profile.jsp">User Profile</a>
-        <a href="Logout.jsp">Logout</a>
-    </div>
-
     <div class="container">
-        <h2>Doctor Channeling Schedule</h2>
+        <h2>Delete Channeling Schedule</h2>
         <table>
             <tr>
                 <th>Doctor ID</th>
@@ -83,13 +54,11 @@
                 <th>Time</th>
                 <th>Max Patients</th>
                 <th>Current Patients</th>
-                <th>Action</th>
             </tr>
             <% 
-                // Fetch and display channeling schedules for the logged-in doctor
-                String loggedInDoctorID = (String)request.getSession().getAttribute("loggedInDoctorID");
-                System.out.println("Logged-in Doctor ID: " + loggedInDoctorID);
-              
+                // Retrieve schedule ID from request parameter
+                int scheduleID = Integer.parseInt(request.getParameter("id"));
+
                 try {
                     // Load MySQL JDBC driver and establish connection
                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -98,31 +67,31 @@
                     String dbPassword = "";
                     Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
 
-                    // Query to fetch channeling schedules
-                    String sql = "SELECT * FROM channeling_schedule WHERE doctor_id = ?";
+                    // Query to fetch channeling schedule details by ID
+                    String sql = "SELECT * FROM channeling_schedule WHERE id = ?";
                     PreparedStatement statement = conn.prepareStatement(sql);
-                    statement.setString(1, loggedInDoctorID);
+                    statement.setInt(1, scheduleID);
                     ResultSet rs = statement.executeQuery();
 
-                    // Iterate through results and display in table rows
-                    while (rs.next()) {
-                        int channelNumber = rs.getInt("id"); // Assuming 'id' is the auto-incremented channel number
+                    // Display schedule details
+                    if (rs.next()) {
+                        String doctorID = rs.getString("doctor_id");
                         String date = rs.getString("channeling_date");
                         String time = rs.getString("time");
                         int maxPatients = rs.getInt("max_patients");
                         int currentPatients = rs.getInt("current_patients");
-                        int scheduleID = rs.getInt("id");
 
-                        // Display each schedule row
+                        // Display schedule details in table row
                         out.println("<tr>");
-                        out.println("<td>" + loggedInDoctorID + "</td>");
-                        out.println("<td>" + channelNumber + "</td>");
+                        out.println("<td>" + doctorID + "</td>");
+                        out.println("<td>" + scheduleID + "</td>");
                         out.println("<td>" + date + "</td>");
                         out.println("<td>" + time + "</td>");
                         out.println("<td>" + maxPatients + "</td>");
                         out.println("<td>" + currentPatients + "</td>");
-                        out.println("<td><a href='Doctor_Update.jsp?id=" + channelNumber + "' class='button'>Update</a> | <a href ='Doctor_Delete.jsp?id="+ scheduleID+"'class='button'>Delete</a></td>");
                         out.println("</tr>");
+                    } else {
+                        out.println("<tr><td colspan='6'>Schedule not found</td></tr>");
                     }
 
                     // Close connections
@@ -134,7 +103,11 @@
                 }
             %>
         </table>
-        <a href="Doctor_Add.jsp" class="button" style="margin-top: 10px;">Add New Schedule</a>
+        <form action="DeleteChannelingServlet" method="post">
+            <input type="hidden" name="scheduleID" value="<%= scheduleID %>">
+            <button type="submit" class="button">Confirm Delete</button>
+            <a href="Doctor.jsp" class="button" style="margin-left: 10px;">Cancel</a>
+        </form>
     </div>
 </body>
 </html>
