@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*, java.util.*" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,81 +65,82 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Doctor.jsp">View</a>
-        <a href="Doctor_Add.jsp">Add</a>
-        <a href="Doctor_Update.jsp">Update</a>
-        <a href="Doctor_Delete.jsp">Delete</a>
-        <a href="Doctor_Profile.jsp">User Profile</a>
+        <a href="Patient.jsp">Appointment List</a>
+        <a href="Patient_Appoinments.jsp">My Appointments </a>
+        <a href="Patient_New_Appoinments.jsp">New Appointments </a>
+        <a href="Patient_Delete_Appoinments.jsp">Delete Appointments </a>
+        <a href="Patient_Profile.jsp">User Profile</a>
         <a href="index.jsp">Logout</a>
     </div>
-
-    <div class="container">
-        <h2>Doctor Channeling Schedule</h2>
+    
+    <div class=""container">
+        <h2> Appointments List </h2>
         <table>
             <tr>
                 <th>No</th>
                 <th>Doctor ID</th>
+                <th>Doctor Name</th>
                 <th>Channel Number</th>
                 <th>Date</th>
                 <th>Time</th>
-                <th>Max Patients</th>
-                <th>Current Patients</th>
-                <th>Action</th>
+                <th>No of token Available</th>
+                <th>Actions</th>
             </tr>
-            <% 
-                // Fetch and display channeling schedules for the logged-in doctor
-                String loggedInDoctorID = (String)request.getSession().getAttribute("loggedInDoctorID");
-                int counter =1; //Initialize counter for row numbering
-              
-                try {
-                    // Load MySQL JDBC driver and establish connection
+            <%
+                //String loggedInPatientID = (String)request.getSession().getAttribute("loggedInPatientID");
+                int counter =1;
+                
+                try{
+                
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     String dbURL = "jdbc:mysql://localhost:3306/e-channeling_system";
                     String dbUser = "root";
                     String dbPassword = "";
                     Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
-
+                       
                     // Query to fetch channeling schedules
-                    String sql = "SELECT * FROM channeling_schedule WHERE doctor_id = ?";
+                    String sql = "SELECT * FROM channeling_schedule" ;
                     PreparedStatement statement = conn.prepareStatement(sql);
-                    statement.setString(1, loggedInDoctorID);
-                    ResultSet rs = statement.executeQuery();
-
+                    ResultSet rs = statement.executeQuery();   
+                    
                     // Iterate through results and display in table rows
-                    while (rs.next()) {
+                    while (rs.next()){
                         int channelNumber = rs.getInt("id"); // Assuming 'id' is the auto-incremented channel number
                         String date = rs.getString("channeling_date");
                         String time = rs.getString("time");
                         int maxPatients = rs.getInt("max_patients");
                         int currentPatients = rs.getInt("current_patients");
                         int scheduleID = rs.getInt("id");
-                        int patients = rs.getInt("NoPatients");
-
-                        // Display each schedule row
+                        String doctorID = rs.getString("doctor_id");
+                        
+                        
+                        
+                        int token = maxPatients-currentPatients;
+                        
+                        
+                        
+                                                // Display each schedule row
                         out.println("<tr>");
                         out.println("<td>" + counter + "</td>");
-                        out.println("<td>" + loggedInDoctorID + "</td>");
+                        out.println("<td>" + doctorID + "</td>");
                         out.println("<td>" + channelNumber + "</td>");
                         out.println("<td>" + date + "</td>");
                         out.println("<td>" + time + "</td>");
-                        out.println("<td>" + maxPatients + "</td>");
-                        out.println("<td>" + currentPatients + "</td>");
+                        out.println("<td>" + token + "</td>");
                         out.println("<td><a href='Doctor_Update.jsp?id=" + channelNumber + "' class='button'>Update</a> | <a href ='Doctor_Delete.jsp?id="+ scheduleID+"'class='button'>Delete</a></td>");
                         out.println("</tr>");
                         
                         counter++;
-                    }
-
-                    // Close connections
-                    rs.close();
-                    statement.close();
-                    conn.close();
+                }
+                
+                rs.close();
+                statement.close();
+                conn.close();
                 } catch (SQLException | ClassNotFoundException e) {
                     out.println("Database connection error: " + e.getMessage());
                 }
             %>
         </table>
-        <a href="Doctor_Add.jsp" class="button" style="margin-top: 10px;">Add New Schedule</a>
     </div>
+    
 </body>
-</html>

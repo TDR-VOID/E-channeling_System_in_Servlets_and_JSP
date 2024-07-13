@@ -139,7 +139,7 @@
                 // Check if user exists
                 if (result.next()) {
                     // Valid user, redirect to Welcome.jsp or patient specific page
-                    response.sendRedirect("Patients_Login.jsp");
+                    response.sendRedirect("Patient.jsp");
                 } else {
                     // Invalid credentials
                     out.println("Invalid NIC or password");
@@ -188,6 +188,7 @@
 
                 // Check if the insertion was successful
                 if (rowsInserted > 0) {
+                    response.sendRedirect("Patients_Login.jsp");
                     out.println("Patient registered successfully!");
                 } else {
                     out.println("Error occurred while registering patient.");
