@@ -67,7 +67,7 @@
   <label for="doc_specialization">Specialization:</label>
   <input type="text" id="doc_specialization" name="doc_specialization" required>
   
-  <input type="hidden" name="action" value="register">
+  <input type="hidden" name="action" value="doctor_register">
   <input type="submit" value="Register">
   <input type="button" value="Login" onclick="goToLogin()">
 </form>

@@ -57,7 +57,7 @@
   <label for="doc_password">Password:</label>
   <input type="password" id="patient_password" name="patient_password" required>
   
-  <input type="hidden" name="action" value="login">
+  <input type="hidden" name="action" value="patient_login">
   <input type="submit" value="Login">
   <input type="button" value="Register" onclick="goToRegister()">
 </form>

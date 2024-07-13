@@ -9,7 +9,7 @@
 <%
     String action = request.getParameter("action");
     
-    if ("login".equals(action)) {
+   if ("doctor_login".equals(action)) {
         String _docUserID = request.getParameter("doc_userID");
         String _docPassword = request.getParameter("doc_password");
 
@@ -26,7 +26,7 @@
                 // Connect to the database
                 Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
 
-                // Prepare SQL statement to query user credentials
+                // Prepare SQL statement to query doctor credentials
                 String sql = "SELECT * FROM doctors WHERE userID = ? AND password = ?";
                 PreparedStatement statement = conn.prepareStatement(sql);
                 statement.setString(1, _docUserID);
@@ -39,6 +39,7 @@
                 if (result.next()) {
                     // Valid user, redirect to Welcome.jsp
                     response.sendRedirect("Welcome.jsp");
+                    conn.close(); // Close connection after redirect
                 } else {
                     // Invalid credentials
                     out.println("Invalid username or password");
@@ -55,7 +56,7 @@
         } else {
             out.println("Empty username or password");
         }
-    } else if ("register".equals(action)) {
+    } else if ("doctor_register".equals(action)) {
         String _docUserID = request.getParameter("doc_userID");
         String _docName = request.getParameter("doc_name");
         String _docPassword = request.getParameter("doc_password");
@@ -90,8 +91,103 @@
                 // Check if the insertion was successful
                 if (rowsInserted > 0) {
                     out.println("Doctor registered successfully!");
+                    response.sendRedirect("Doctor_Login.jsp");
+                    
                 } else {
                     out.println("Error occurred while registering doctor.");
+                }
+
+                // Close resources
+                statement.close();
+                conn.close();
+
+            } catch (SQLException | ClassNotFoundException e) {
+                out.println("Database connection error: " + e.getMessage());
+            }
+        } else {
+            out.println("All fields are required");
+        }
+    } else if ("patient_login".equals(action)) {
+        String _patientNIC = request.getParameter("patient_NIC");
+        String _patientPassword = request.getParameter("patient_password");
+
+        if (_patientNIC != null && _patientPassword != null) {
+            try {
+                // Load the MySQL JDBC driver
+                Class.forName("com.mysql.cj.jdbc.Driver");
+
+                // Database URL, username, and password
+                String dbURL = "jdbc:mysql://localhost:3306/e-channeling_system";
+                String dbUser = "root"; // Default XAMPP MySQL user
+                String dbPassword = ""; // Default XAMPP MySQL password
+
+                // Connect to the database
+                Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
+
+                // Prepare SQL statement to query patient credentials
+                String sql = "SELECT * FROM patients WHERE NIC = ? AND password = ?";
+                PreparedStatement statement = conn.prepareStatement(sql);
+                statement.setString(1, _patientNIC);
+                statement.setString(2, _patientPassword);
+
+                // Execute the query
+                ResultSet result = statement.executeQuery();
+
+                // Check if user exists
+                if (result.next()) {
+                    // Valid user, redirect to Welcome.jsp or patient specific page
+                    response.sendRedirect("Patients_Login.jsp");
+                } else {
+                    // Invalid credentials
+                    out.println("Invalid NIC or password");
+                }
+
+                // Close resources
+                result.close();
+                statement.close();
+                conn.close();
+
+            } catch (SQLException | ClassNotFoundException e) {
+                out.println("Database connection error: " + e.getMessage());
+            }
+        } else {
+            out.println("Empty NIC or password");
+        }
+    } else if ("patient_register".equals(action)) {
+        String _patientNIC = request.getParameter("patient_NIC");
+        String _patientName = request.getParameter("patient_name");
+        String _patientPassword = request.getParameter("patient_password");
+        String _patientPhone = request.getParameter("patient_phone");
+
+        if (_patientNIC != null && _patientName != null && _patientPassword != null && _patientPhone != null) {
+            try {
+                // Load the MySQL JDBC driver
+                Class.forName("com.mysql.cj.jdbc.Driver");
+
+                // Database URL, username, and password
+                String dbURL = "jdbc:mysql://localhost:3306/e-channeling_system";
+                String dbUser = "root"; // Default XAMPP MySQL user
+                String dbPassword = ""; // Default XAMPP MySQL password
+
+                // Connect to the database
+                Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
+
+                // Prepare SQL statement to insert new patient
+                String sql = "INSERT INTO patients (NIC, name, password, phone) VALUES (?, ?, ?, ?)";
+                PreparedStatement statement = conn.prepareStatement(sql);
+                statement.setString(1, _patientNIC);
+                statement.setString(2, _patientName);
+                statement.setString(3, _patientPassword);
+                statement.setString(4, _patientPhone);
+
+                // Execute the update
+                int rowsInserted = statement.executeUpdate();
+
+                // Check if the insertion was successful
+                if (rowsInserted > 0) {
+                    out.println("Patient registered successfully!");
+                } else {
+                    out.println("Error occurred while registering patient.");
                 }
 
                 // Close resources

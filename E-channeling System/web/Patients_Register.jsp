@@ -66,7 +66,7 @@
   <input type="text" id="patient_phone" name="patient_phone" required>
   
   
-  <input type="hidden" name="action" value="register">
+  <input type="hidden" name="action" value="patient_register">
   <input type="submit" value="Register">
   <input type="button" value="Login" onclick="goToLogin()">
 </form>
