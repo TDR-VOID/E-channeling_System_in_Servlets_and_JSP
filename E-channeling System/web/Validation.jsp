@@ -38,7 +38,10 @@
                 // Check if user exists
                 if (result.next()) {
                     // Valid user, redirect to Welcome.jsp
-                    response.sendRedirect("Welcome.jsp");
+                    String loggedInDoctorID = result.getString("userID"); // Adjust column name accordingly
+                    session.setAttribute("loggedInDoctorID", loggedInDoctorID);
+                    request.getSession().setAttribute("loggedInDoctorID", _docUserID);
+                    response.sendRedirect("Doctor.jsp");
                     conn.close(); // Close connection after redirect
                 } else {
                     // Invalid credentials
