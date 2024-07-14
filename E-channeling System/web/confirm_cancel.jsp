@@ -66,9 +66,10 @@
                 // Commit transaction
                 conn.commit();
                 deleteStatement.close();
+                response.sendRedirect("Patient.jsp");
 
-                out.println("<p>Your appointment has been successfully cancelled.</p>");
-                out.println("<a href='Patient.jsp' class='button'>Go Back</a>");
+                //out.println("<p>Your appointment has been successfully cancelled.</p>");
+                //out.println("<a href='Patient.jsp' class='button'>Go Back</a>");
 
                 conn.close();
             } catch (SQLException | ClassNotFoundException e) {

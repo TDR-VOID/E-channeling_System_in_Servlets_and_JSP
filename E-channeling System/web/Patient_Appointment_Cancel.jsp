@@ -88,7 +88,7 @@
 
                     // Display confirmation buttons
                     out.println("<a href='confirm_cancel.jsp?id=" + channelNumber + "' class='button'>Confirm Cancellation</a>");
-                    out.println("<a href='Patient.jsp' class='button'>Go Back</a>");
+                    out.println("<a href='Patient_Appoinments.jsp' class='button'>Go Back</a>");
                 }
 
                 rs.close();

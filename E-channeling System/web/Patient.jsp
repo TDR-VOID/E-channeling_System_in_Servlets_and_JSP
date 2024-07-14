@@ -65,10 +65,9 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Patient.jsp">Appointment List</a>
-        <a href="Patient_Appoinments.jsp">My Appointments</a>
-        <a href="Patient_New_Appoinments.jsp">New Appointments</a>
-        <a href="Patient_Delete_Appoinments.jsp">Delete Appointments</a>
+        <a href="Patient.jsp">Patient</a>
+        <a href="Patient_Appointment_List.jsp">Appointment List</a>
+        <a href="Patient_Appointments.jsp">My Appointments</a>
         <a href="Patient_Profile.jsp">User Profile</a>
         <a href="index.jsp">Logout</a>
     </div>
@@ -86,6 +85,7 @@
                 <th>No of token Available</th>
                 <th>Actions</th>
             </tr>
+            
             <% int counter = 1;
                try {
                    Class.forName("com.mysql.cj.jdbc.Driver");
@@ -144,7 +144,7 @@
                    out.println("</table>");
                    out.println("<h2>My Confirmed Appointments</h2>");
                    out.println("<table>");
-                   out.println("<tr><th>No</th><th>Doctor ID</th><th>Doctor Name</th><th>Channel Number</th><th>Date</th><th>Time</th></tr>");
+                   out.println("<tr><th>No</th><th>Doctor ID</th><th>Doctor Name</th><th>Channel Number</th><th>Date</th><th>Time</th><th>Action</tr></tr>");
 
                    int confirmedCounter = 1;
                    while (confirmedRs.next()) {
