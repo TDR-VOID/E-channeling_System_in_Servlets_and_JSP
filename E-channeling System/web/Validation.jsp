@@ -140,8 +140,9 @@
                 if (result.next()) {
                     // Valid user, redirect to Welcome.jsp or patient specific page
                     String loggedInPatientName = result.getString("name"); // Get the patient's name
+                    String loggedInPatientNIC = result.getString("NIC");
                     session.setAttribute("loggedInPatientName", loggedInPatientName); // Store the patient's name in the session
-                    session.setAttribute("loggedInPatientNIC", _patientNIC); // Store the patient's NIC in the session
+                    session.setAttribute("loggedInPatientNIC", loggedInPatientNIC); // Store the patient's NIC in the session
                     response.sendRedirect("Patient.jsp");
                 } else {
                     // Invalid credentials

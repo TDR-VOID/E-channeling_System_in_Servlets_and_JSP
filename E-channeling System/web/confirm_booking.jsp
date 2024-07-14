@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*, java.util.*" %>
+<%@ page import="javax.servlet.http.*, javax.servlet.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +55,7 @@
         <h2>Confirm Appointment</h2>
         <%
             String channelNumber = request.getParameter("id");
-            String patientID = (String)session.getAttribute("loggedInPatientNIC");
+            String patientNIC = (String)session.getAttribute("loggedInPatientNIC");
             String patientName = (String)session.getAttribute("loggedInPatientName");
 
             try {
@@ -64,17 +65,14 @@
                 String dbPassword = "";
                 Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
 
-                // Begin transaction for atomicity
-                conn.setAutoCommit(false);
-
                 // Query to fetch the selected appointment details
-                String fetchAppointmentSQL = "SELECT cs.id, cs.doctor_id, cs.channeling_date, cs.time, cs.max_patients, cs.current_patients, d.name as doctor_name " +
-                                             "FROM channeling_schedule cs " +
-                                             "JOIN doctors d ON cs.doctor_id = d.userID " +
-                                             "WHERE cs.id = ?";
-                PreparedStatement fetchStatement = conn.prepareStatement(fetchAppointmentSQL);
-                fetchStatement.setInt(1, Integer.parseInt(channelNumber));
-                ResultSet rs = fetchStatement.executeQuery();
+                String sql = "SELECT cs.id, cs.doctor_id, cs.channeling_date, cs.time, cs.max_patients, cs.current_patients, d.name as doctor_name " +
+                             "FROM channeling_schedule cs " +
+                             "JOIN doctors d ON cs.doctor_id = d.userID " +
+                             "WHERE cs.id = ?";
+                PreparedStatement statement = conn.prepareStatement(sql);
+                statement.setInt(1, Integer.parseInt(channelNumber));
+                ResultSet rs = statement.executeQuery();
 
                 if (rs.next()) {
                     String doctorID = rs.getString("doctor_id");
@@ -84,6 +82,18 @@
                     int maxPatients = rs.getInt("max_patients");
                     int currentPatients = rs.getInt("current_patients");
                     int token = maxPatients - currentPatients;
+
+                    // Insert appointment into appointments table
+                    String insertSQL = "INSERT INTO appointments (patient_NIC, channeling_schedule_id, appointment_date, appointment_time, status) " +
+                                       "VALUES (?, ?, ?, ?, ?)";
+                    PreparedStatement insertStatement = conn.prepareStatement(insertSQL);
+                    insertStatement.setString(1, patientNIC);
+                    insertStatement.setInt(2, Integer.parseInt(channelNumber));
+                    insertStatement.setString(3, date);
+                    insertStatement.setString(4, time);
+                    insertStatement.setString(5, "Confirmed"); // Initial status could be "Confirmed"
+                    int rowsInserted = insertStatement.executeUpdate();
+                    insertStatement.close();
 
                     // Display the selected appointment details
                     out.println("<table>");
@@ -97,30 +107,17 @@
 
                     // Display the logged-in patient's name
                     out.println("<h3>Patient Name: " + patientName + "</h3>");
-                    out.println("<h3>Patient NIC: "+ patientID + "</h3>");
-
-                    // Update current_patients count
-                    int newCurrentPatients = currentPatients + 1;
-                    String updateSQL = "UPDATE channeling_schedule SET current_patients = ? WHERE id = ?";
-                    PreparedStatement updateStatement = conn.prepareStatement(updateSQL);
-                    updateStatement.setInt(1, newCurrentPatients);
-                    updateStatement.setInt(2, Integer.parseInt(channelNumber));
-                    updateStatement.executeUpdate();
-
-                    // Commit transaction
-                    conn.commit();
-                    updateStatement.close();
+                    out.println("<h3>Patient NIC: "+ patientNIC + "</h3>");
                 }
 
                 rs.close();
-                fetchStatement.close();
+                statement.close();
                 conn.close();
             } catch (SQLException | ClassNotFoundException e) {
                 out.println("Database connection error: " + e.getMessage());
             }
         %>
-        <a href="confirm_booking.jsp?id=<%=channelNumber%>" class="button">Confirm Booking</a>
-        <a href="Patient.jsp" class="button">Cancel</a>
+        <a href="Patient.jsp" class="button">Back to Appointments</a>
     </div>
 </body>
 </html>

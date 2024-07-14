@@ -86,55 +86,92 @@
                 <th>No of token Available</th>
                 <th>Actions</th>
             </tr>
-            <%
-                int counter = 1;
+            <% int counter = 1;
+               try {
+                   Class.forName("com.mysql.cj.jdbc.Driver");
+                   String dbURL = "jdbc:mysql://localhost:3306/e-channeling_system";
+                   String dbUser = "root";
+                   String dbPassword = "";
+                   Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
 
-                try {
-                    Class.forName("com.mysql.cj.jdbc.Driver");
-                    String dbURL = "jdbc:mysql://localhost:3306/e-channeling_system";
-                    String dbUser = "root";
-                    String dbPassword = "";
-                    Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
+                   // Query to fetch channeling schedules and doctor names
+                   String sql = "SELECT cs.id, cs.doctor_id, cs.channeling_date, cs.time, cs.max_patients, cs.current_patients, d.name as doctor_name " +
+                                "FROM channeling_schedule cs " +
+                                "JOIN doctors d ON cs.doctor_id = d.userID";
+                   PreparedStatement statement = conn.prepareStatement(sql);
+                   ResultSet rs = statement.executeQuery();
 
-                    // Query to fetch channeling schedules and doctor names
-                    String sql = "SELECT cs.id, cs.doctor_id, cs.channeling_date, cs.time, cs.max_patients, cs.current_patients, d.name as doctor_name " +
-                                 "FROM channeling_schedule cs " +
-                                 "JOIN doctors d ON cs.doctor_id = d.userID";
-                    PreparedStatement statement = conn.prepareStatement(sql);
-                    ResultSet rs = statement.executeQuery();
+                   // Iterate through results and display in table rows
+                   while (rs.next()) {
+                       int channelNumber = rs.getInt("id");
+                       String date = rs.getString("channeling_date");
+                       String time = rs.getString("time");
+                       int maxPatients = rs.getInt("max_patients");
+                       int currentPatients = rs.getInt("current_patients");
+                       String doctorID = rs.getString("doctor_id");
+                       String doctorName = rs.getString("doctor_name");
+                       int token = maxPatients - currentPatients;
 
-                    // Iterate through results and display in table rows
-                    while (rs.next()) {
-                        int channelNumber = rs.getInt("id");
-                        String date = rs.getString("channeling_date");
-                        String time = rs.getString("time");
-                        int maxPatients = rs.getInt("max_patients");
-                        int currentPatients = rs.getInt("current_patients");
-                        String doctorID = rs.getString("doctor_id");
-                        String doctorName = rs.getString("doctor_name");
-                        int token = maxPatients - currentPatients;
+                       // Display each schedule row
+                       out.println("<tr>");
+                       out.println("<td>" + counter + "</td>");
+                       out.println("<td>" + doctorID + "</td>");
+                       out.println("<td>" + doctorName + "</td>");
+                       out.println("<td>" + channelNumber + "</td>");
+                       out.println("<td>" + date + "</td>");
+                       out.println("<td>" + time + "</td>");
+                       out.println("<td>" + token + "</td>");
+                       out.println("<td><a href='Patient_New_Appoinments.jsp?id=" + channelNumber + "' class='button'>Appoint</a> ");
+                       out.println("</tr>");
 
-                        // Display each schedule row
-                        out.println("<tr>");
-                        out.println("<td>" + counter + "</td>");
-                        out.println("<td>" + doctorID + "</td>");
-                        out.println("<td>" + doctorName + "</td>");
-                        out.println("<td>" + channelNumber + "</td>");
-                        out.println("<td>" + date + "</td>");
-                        out.println("<td>" + time + "</td>");
-                        out.println("<td>" + token + "</td>");
-                        out.println("<td><a href='Patient_New_Appoinments.jsp?id=" + channelNumber + "' class='button'>Appoint</a> ");
-                        out.println("</tr>");
+                       counter++;
+                   }
 
-                        counter++;
-                    }
+                   rs.close();
+                   statement.close();
 
-                    rs.close();
-                    statement.close();
-                    conn.close();
-                } catch (SQLException | ClassNotFoundException e) {
-                    out.println("Database connection error: " + e.getMessage());
-                }
+                   // Fetch confirmed appointments of the logged-in patient
+                   String confirmedAppointmentsSQL = "SELECT cs.id, cs.doctor_id, cs.channeling_date, cs.time, d.name as doctor_name " +
+                                                     "FROM channeling_schedule cs " +
+                                                     "JOIN doctors d ON cs.doctor_id = d.userID " +
+                                                     "JOIN appointments pa ON cs.id = pa.channeling_schedule_id " +
+                                                     "WHERE pa.patient_nic = ?";
+                   PreparedStatement confirmedStatement = conn.prepareStatement(confirmedAppointmentsSQL);
+                   confirmedStatement.setString(1, (String) session.getAttribute("loggedInPatientNIC"));
+                   ResultSet confirmedRs = confirmedStatement.executeQuery();
+
+                   // Display confirmed appointments table
+                   out.println("</table>");
+                   out.println("<h2>My Confirmed Appointments</h2>");
+                   out.println("<table>");
+                   out.println("<tr><th>No</th><th>Doctor ID</th><th>Doctor Name</th><th>Channel Number</th><th>Date</th><th>Time</th></tr>");
+
+                   int confirmedCounter = 1;
+                   while (confirmedRs.next()) {
+                       String doctorID = confirmedRs.getString("doctor_id");
+                       String doctorName = confirmedRs.getString("doctor_name");
+                       int channelNumber = confirmedRs.getInt("id");
+                       String date = confirmedRs.getString("channeling_date");
+                       String time = confirmedRs.getString("time");
+
+                       out.println("<tr>");
+                       out.println("<td>" + confirmedCounter + "</td>");
+                       out.println("<td>" + doctorID + "</td>");
+                       out.println("<td>" + doctorName + "</td>");
+                       out.println("<td>" + channelNumber + "</td>");
+                       out.println("<td>" + date + "</td>");
+                       out.println("<td>" + time + "</td>");
+                       out.println("</tr>");
+
+                       confirmedCounter++;
+                   }
+
+                   confirmedRs.close();
+                   confirmedStatement.close();
+                   conn.close();
+               } catch (SQLException | ClassNotFoundException e) {
+                   out.println("Database connection error: " + e.getMessage());
+               }
             %>
         </table>
     </div>
