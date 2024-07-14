@@ -161,6 +161,7 @@
                        out.println("<td>" + channelNumber + "</td>");
                        out.println("<td>" + date + "</td>");
                        out.println("<td>" + time + "</td>");
+                       out.println("<td><a href='Patient_Appointment_Cancel.jsp?id=" + channelNumber + "' class='button'>Cancel</a></td>");
                        out.println("</tr>");
 
                        confirmedCounter++;
