@@ -65,6 +65,7 @@
 </head>
 <body>
     <div class="navbar">
+        <a href="Patient.jsp">Patient</a>
         <a href="Patient_Appointment_List.jsp">Appointment List</a>
         <a href="Patient_Appointments.jsp">My Appointments</a>
         <a href="Patient_Profile.jsp">User Profile</a>
