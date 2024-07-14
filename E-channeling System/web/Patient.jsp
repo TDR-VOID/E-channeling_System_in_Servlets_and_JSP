@@ -66,15 +66,15 @@
 <body>
     <div class="navbar">
         <a href="Patient.jsp">Appointment List</a>
-        <a href="Patient_Appoinments.jsp">My Appointments </a>
-        <a href="Patient_New_Appoinments.jsp">New Appointments </a>
-        <a href="Patient_Delete_Appoinments.jsp">Delete Appointments </a>
+        <a href="Patient_Appoinments.jsp">My Appointments</a>
+        <a href="Patient_New_Appoinments.jsp">New Appointments</a>
+        <a href="Patient_Delete_Appoinments.jsp">Delete Appointments</a>
         <a href="Patient_Profile.jsp">User Profile</a>
         <a href="index.jsp">Logout</a>
     </div>
-    
-    <div class=""container">
-        <h2> Appointments List </h2>
+
+    <div class="container">
+        <h2>Appointments List</h2>
         <table>
             <tr>
                 <th>No</th>
@@ -87,60 +87,56 @@
                 <th>Actions</th>
             </tr>
             <%
-                //String loggedInPatientID = (String)request.getSession().getAttribute("loggedInPatientID");
-                int counter =1;
-                
-                try{
-                
+                int counter = 1;
+
+                try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     String dbURL = "jdbc:mysql://localhost:3306/e-channeling_system";
                     String dbUser = "root";
                     String dbPassword = "";
                     Connection conn = DriverManager.getConnection(dbURL, dbUser, dbPassword);
-                       
-                    // Query to fetch channeling schedules
-                    String sql = "SELECT * FROM channeling_schedule" ;
+
+                    // Query to fetch channeling schedules and doctor names
+                    String sql = "SELECT cs.id, cs.doctor_id, cs.channeling_date, cs.time, cs.max_patients, cs.current_patients, d.name as doctor_name " +
+                                 "FROM channeling_schedule cs " +
+                                 "JOIN doctors d ON cs.doctor_id = d.userID";
                     PreparedStatement statement = conn.prepareStatement(sql);
-                    ResultSet rs = statement.executeQuery();   
-                    
+                    ResultSet rs = statement.executeQuery();
+
                     // Iterate through results and display in table rows
-                    while (rs.next()){
-                        int channelNumber = rs.getInt("id"); // Assuming 'id' is the auto-incremented channel number
+                    while (rs.next()) {
+                        int channelNumber = rs.getInt("id");
                         String date = rs.getString("channeling_date");
                         String time = rs.getString("time");
                         int maxPatients = rs.getInt("max_patients");
                         int currentPatients = rs.getInt("current_patients");
-                        int scheduleID = rs.getInt("id");
                         String doctorID = rs.getString("doctor_id");
-                        
-                        
-                        
-                        int token = maxPatients-currentPatients;
-                        
-                        
-                        
-                                                // Display each schedule row
+                        String doctorName = rs.getString("doctor_name");
+                        int token = maxPatients - currentPatients;
+
+                        // Display each schedule row
                         out.println("<tr>");
                         out.println("<td>" + counter + "</td>");
                         out.println("<td>" + doctorID + "</td>");
+                        out.println("<td>" + doctorName + "</td>");
                         out.println("<td>" + channelNumber + "</td>");
                         out.println("<td>" + date + "</td>");
                         out.println("<td>" + time + "</td>");
                         out.println("<td>" + token + "</td>");
-                        out.println("<td><a href='Doctor_Update.jsp?id=" + channelNumber + "' class='button'>Update</a> | <a href ='Doctor_Delete.jsp?id="+ scheduleID+"'class='button'>Delete</a></td>");
+                        out.println("<td><a href='Doctor_Update.jsp?id=" + channelNumber + "' class='button'>Update</a> | <a href='Doctor_Delete.jsp?id=" + channelNumber + "' class='button'>Delete</a></td>");
                         out.println("</tr>");
-                        
+
                         counter++;
-                }
-                
-                rs.close();
-                statement.close();
-                conn.close();
+                    }
+
+                    rs.close();
+                    statement.close();
+                    conn.close();
                 } catch (SQLException | ClassNotFoundException e) {
                     out.println("Database connection error: " + e.getMessage());
                 }
             %>
         </table>
     </div>
-    
 </body>
+</html>
