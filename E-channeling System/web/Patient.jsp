@@ -123,7 +123,7 @@
                         out.println("<td>" + date + "</td>");
                         out.println("<td>" + time + "</td>");
                         out.println("<td>" + token + "</td>");
-                        out.println("<td><a href='Doctor_Update.jsp?id=" + channelNumber + "' class='button'>Update</a> | <a href='Doctor_Delete.jsp?id=" + channelNumber + "' class='button'>Delete</a></td>");
+                        out.println("<td><a href='Patient_New_Appoinments.jsp?id=" + channelNumber + "' class='button'>Appoint</a> ");
                         out.println("</tr>");
 
                         counter++;
