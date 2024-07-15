@@ -67,9 +67,7 @@
     <div class="navbar">
         <a href="Doctor.jsp">View</a>
         <a href="Doctor_Add.jsp">Add</a>
-        <a href="Doctor_Update.jsp">Update</a>
-        <a href="Doctor_Delete.jsp">Delete</a>
-        <a href="Doctor_Profile.jsp">User Profile</a>
+        <a href="Doctor_ViewProfile.jsp">User Profile</a>
         <a href="index.jsp">Logout</a>
     </div>
 
@@ -113,7 +111,7 @@
                         int maxPatients = rs.getInt("max_patients");
                         int currentPatients = rs.getInt("current_patients");
                         int scheduleID = rs.getInt("id");
-                        int patients = rs.getInt("NoPatients");
+                        //int patients = rs.getInt("NoPatients");
 
                         // Display each schedule row
                         out.println("<tr>");

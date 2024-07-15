@@ -68,7 +68,7 @@
         <a href="Patient.jsp">Patient</a>
         <a href="Patient_Appointment_List.jsp">Appointment List</a>
         <a href="Patient_Appointments.jsp">My Appointments</a>
-        <a href="Patient_Profile.jsp">User Profile</a>
+        <a href="Patient_ViewProfile.jsp">User Profile</a>
         <a href="index.jsp">Logout</a>
     </div>
 
