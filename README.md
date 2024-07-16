@@ -137,6 +137,60 @@ Run the following SQL command to create the database:
 CREATE DATABASE e_channeling_system;
 ```
 
+### Step 2: Use the Database
+Switch to the newly created database:
+``` SQL
+USE e_channeling_system;
+```
+
+### Step 3: Create the Tables
+Run the following SQL commands to create the necessary tables:
+``` SQL
+CREATE TABLE doctors (
+    userID VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    specialization VARCHAR(100) NOT NULL
+);
+```
+Create the Patients Table
+``` SQL
+CREATE TABLE patients (
+    NIC VARCHAR(12) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL
+);
+```
+Create the Channeling Schedule Table
+``` SQL
+CREATE TABLE channeling_schedule (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    doctor_id VARCHAR(10),
+    channeling_date DATE NOT NULL,
+    time TIME NOT NULL,
+    max_patients INT NOT NULL,
+    current_patients INT NOT NULL,
+    FOREIGN KEY (doctor_id) REFERENCES doctors(userID)
+);
+```
+Create the Appointments Table
+``` SQL
+CREATE TABLE appointments (
+    channeling_schedule_id INT,
+    patient_NIC VARCHAR(12),
+    appointment_date DATE NOT NULL,
+    appointment_time TIME NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    PRIMARY KEY (channeling_schedule_id, patient_NIC),
+    FOREIGN KEY (channeling_schedule_id) REFERENCES channeling_schedule(id),
+    FOREIGN KEY (patient_NIC) REFERENCES patients(NIC)
+);
+```
+Follow these steps to set up your database, and you'll be ready to deploy the E-channeling System.
+
 
 ## Technologies and Tools 
 - Java Servlets
