@@ -33,9 +33,13 @@
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
         .button {
             display: block;
-            width: 100%;
             padding: 10px;
             text-align: center;
             background-color: #4CAF50;
@@ -43,15 +47,22 @@
             text-decoration: none;
             border-radius: 4px;
             margin-bottom: 10px;
+            flex: 1;
+            text-align: center;
         }
         .button:hover {
             background-color: #45a049;
+        }
+        .title {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Confirm Appointment</h2>
+        <h1 class="title">Confirm Appointment</h1>
+        <br>
+        <br>
         <%
             String channelNumber = request.getParameter("id");
             String patientID = (String)session.getAttribute("loggedInPatientNIC");
@@ -119,8 +130,10 @@
                 out.println("Database connection error: " + e.getMessage());
             }
         %>
-        <a href="confirm_booking.jsp?id=<%=channelNumber%>" class="button">Confirm Booking</a>
-        <a href="Patient.jsp" class="button">Cancel</a>
+        <div class="button-container">
+            <a href="confirm_booking.jsp?id=<%=channelNumber%>" class="button">Confirm Booking</a>
+            <a href="Patient.jsp" class="button">Cancel</a>
+        </div>
     </div>
 </body>
 </html>

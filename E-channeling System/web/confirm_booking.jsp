@@ -48,11 +48,16 @@
         .button:hover {
             background-color: #45a049;
         }
+        .title{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Confirm Appointment</h2>
+        <h1 class="title">Confirm Appointment</h1> 
+        <br>
+        <br>
         <%
             String channelNumber = request.getParameter("id");
             String patientNIC = (String)session.getAttribute("loggedInPatientNIC");
