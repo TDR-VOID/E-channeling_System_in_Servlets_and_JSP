@@ -27,14 +27,26 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
         .navbar a:hover {
             background-color: #ddd;
             color: black;
         }
+        .navbar a.active {
+            background-color: #f0f0f0;
+            color: black;
+        }
         .container {
             margin-top: 50px;
             padding: 20px;
+        }
+        
+        .newcontainer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
         }
         form {
             width: 50%;
@@ -75,16 +87,15 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Doctor.jsp">View</a>
-        <a href="Doctor_Add.jsp">Add</a>
-        <a href="Doctor_Update.jsp">Update</a>
-        <a href="Doctor_Delete.jsp">Delete</a>
-        <a href="Doctor_Profile.jsp">User Profile</a>
-        <a href="Logout.jsp">Logout</a>
+        <a href="Doctor.jsp"><b>Channeling Schedule</b></a>
+        <a href="Doctor_Add.jsp" class="active"><b>Add New Schedule</b></a>
+        <a href="Doctor_ViewProfile.jsp"><b>User Profile</b></a>
+        <a href="index.jsp"><b>Logout</b></a>
     </div>
-
     <div class="container">
-        <h2>Add Doctor Channeling Schedule</h2>
+        <div class="newcontainer">
+        <h1>Create New Schedule</h1>
+        </div>
         <form action="AddChannelingServlet" method="post">
             <div class="form-group">
                 <label for="doctorID">Doctor ID:</label>

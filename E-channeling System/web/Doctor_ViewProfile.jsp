@@ -27,14 +27,26 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
         .navbar a:hover {
             background-color: #ddd;
             color: black;
         }
+        .navbar a.active {
+            background-color: #f0f0f0;
+            color: black;
+        }
         .container {
             margin-top: 50px;
             padding: 20px;
+        }
+        
+        .newcontainer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
         }
         .profile-container {
             background-color: #fff;
@@ -74,14 +86,16 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Doctor.jsp">View</a>
-        <a href="Doctor_Add.jsp">Add</a>
-        <a href="Doctor_ViewProfile.jsp">User Profile</a>
-        <a href="index.jsp">Logout</a>
+        <a href="Doctor.jsp"><b>Channeling Schedule</b></a>
+        <a href="Doctor_Add.jsp"><b>Add New Schedule</b></a>
+        <a href="Doctor_ViewProfile.jsp" class="active"><b>User Profile</b></a>
+        <a href="index.jsp"><b>Logout</b></a>
     </div>
 
     <div class="container">
-        <h2>View Doctor Profile</h2>
+        <div class="newcontainer">
+        <h1>View Doctor Profile</h1>
+        </div>
         <div class="profile-container">
             <%
                 String doctorID = (String) session.getAttribute("loggedInDoctorID");

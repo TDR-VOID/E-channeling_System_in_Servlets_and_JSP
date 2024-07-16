@@ -12,6 +12,29 @@
             background-color: #f0f0f0;
             margin: 0;
         }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed; /* Fixed to the top */
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
         .container {
             margin-top: 50px;
             padding: 20px;
@@ -29,7 +52,7 @@
             background-color: #4CAF50;
             color: white;
         }
-        .button {
+        .button1 {
             background-color: #f44336;
             color: white;
             padding: 8px 12px;
@@ -37,6 +60,17 @@
             cursor: pointer;
             border-radius: 4px;
             text-decoration: none;
+            font-size: 16px;
+        }
+        .button2 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
         }
         .button:hover {
             background-color: #45a049;
@@ -44,8 +78,14 @@
     </style>
 </head>
 <body>
+        <div class="navbar">
+        <a href="Doctor.jsp"><b>Channeling Schedule</b></a>
+        <a href="Doctor_Add.jsp"><b>Add New Schedule</b></a>
+        <a href="Doctor_ViewProfile.jsp"><b>User Profile</b></a>
+        <a href="index.jsp"><b>Logout</b></a>
+    </div>
     <div class="container">
-        <h2>Delete Channeling Schedule</h2>
+        <h1>Delete Channeling Schedule</h1>
         <table>
             <tr>
                 <th>Doctor ID</th>
@@ -103,10 +143,12 @@
                 }
             %>
         </table>
+        <br>
+        <br>
         <form action="DeleteChannelingServlet" method="post">
             <input type="hidden" name="scheduleID" value="<%= scheduleID %>">
-            <button type="submit" class="button">Confirm Delete</button>
-            <a href="Doctor.jsp" class="button" style="margin-left: 10px;">Cancel</a>
+            <button type="submit" class="button1">Confirm Delete</button>
+            <a href="Doctor.jsp" class="button2" style="margin-left: 10px;">Cancel</a>
         </form>
     </div>
 </body>

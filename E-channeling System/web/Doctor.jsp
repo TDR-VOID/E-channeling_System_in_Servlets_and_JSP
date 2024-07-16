@@ -27,9 +27,15 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
         .navbar a:hover {
             background-color: #ddd;
+            color: black;
+        }
+        .navbar a.active {
+            background-color: #f0f0f0;
             color: black;
         }
         .container {
@@ -44,6 +50,7 @@
         th, td {
             padding: 10px;
             border: 1px solid #ddd;
+            text-align: center;
         }
         th {
             background-color: #4CAF50;
@@ -65,10 +72,10 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Doctor.jsp">View</a>
-        <a href="Doctor_Add.jsp">Add</a>
-        <a href="Doctor_ViewProfile.jsp">User Profile</a>
-        <a href="index.jsp">Logout</a>
+        <a href="Doctor.jsp" class="active"><b>Channeling Schedule</b></a>
+        <a href="Doctor_Add.jsp"><b>Add New Schedule</b></a>
+        <a href="Doctor_ViewProfile.jsp"><b>User Profile</b></a>
+        <a href="index.jsp"><b>Logout</b></a>
     </div>
 
     <div class="container">
@@ -137,6 +144,8 @@
                 }
             %>
         </table>
+        <br>
+        <br>
         <a href="Doctor_Add.jsp" class="button" style="margin-top: 10px;">Add New Schedule</a>
     </div>
 </body>
