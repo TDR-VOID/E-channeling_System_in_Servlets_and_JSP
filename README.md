@@ -82,7 +82,14 @@ The E-channeling System is a web-based application developed using Java Servlets
 
 - A consistent navigation bar is provided for ease of use, allowing access to various sections like appointment lists, personal appointments, user profiles, and logout.
 
-
+## Database Structure
+Doctors Table
+Column	Data Type	Constraints
+userID	VARCHAR(10)	PRIMARY KEY
+name	VARCHAR(100)	NOT NULL
+password	VARCHAR(100)	NOT NULL
+phone	VARCHAR(15)	NOT NULL
+specialization	VARCHAR(100)	NOT NULL
 
 
 ## Contributions
