@@ -82,3 +82,8 @@ The E-channeling System is a web-based application developed using Java Servlets
 
 - A consistent navigation bar is provided for ease of use, allowing access to various sections like appointment lists, personal appointments, user profiles, and logout.
 
+
+
+
+## Contributions
+Contributions to enhance the functionality and features of the e-channeling system are welcome. Please follow the standard GitHub workflow for submitting pull requests.
