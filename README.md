@@ -45,7 +45,7 @@ The E-channeling System is a web-based application developed using Java Servlets
 3. **Appointment Booking**
    - Patients should be able to view available channeling schedules.
    - Patients should be able to make an appointment.
-     - Each appointment should not exceed the patient count per channeling schedule.
+   - Each appointment should not exceed the patient count per channeling schedule.
 
 ### Non-Functional Requirements
 1. **Data Persistence**
