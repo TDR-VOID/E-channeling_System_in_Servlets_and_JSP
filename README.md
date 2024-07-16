@@ -83,12 +83,12 @@ The E-channeling System is a web-based application developed using Java Servlets
 - A consistent navigation bar is provided for ease of use, allowing access to various sections like appointment lists, personal appointments, user profiles, and logout.
 
 ### Database Structure
-The database for the E-channeling System is designed to manage information for doctors, patients, channeling schedules, and appointments. It includes the following tables:
+The database for the E-channeling System is designed to manage information for doctors, patients, channelling schedules, and appointments. It includes the following tables:
 
 - Doctors Table: Stores information about doctors, including their userID, name, password, phone, and specialization.
 - Patients Table: Contains patient details such as NIC, name, password, phone, and email.
-- Channeling Schedule Table: Manages the scheduling of doctor appointments, including details like doctor ID, channeling date, time, maximum patients allowed, and the current number of patients.
-- Appointments Table: Records the appointments made by patients, including channeling schedule ID, patient NIC, appointment date, appointment time, and statu
+- Channeling Schedule Table: Manages the scheduling of doctor appointments, including details like doctor ID, channelling date, time, maximum patients allowed, and the current number of patients.
+- Appointments Table: Records the appointments made by patients, including channelling schedule ID, patient NIC, appointment date, appointment time, and status.
 
 #### Doctors Table
 | Column       | Data Type     | Constraints      |
@@ -127,6 +127,15 @@ The database for the E-channeling System is designed to manage information for d
 | appointment_time     | TIME        | NOT NULL                        |
 | status               | VARCHAR(20) | NOT NULL                        |
 
+
+## Database Setup
+To set up the database for the E-channeling System, follow these steps:
+
+### Step 1: Create the Database
+Run the following SQL command to create the database:
+``` SQL
+CREATE DATABASE e_channeling_system;
+```
 
 
 ## Technologies and Tools 
