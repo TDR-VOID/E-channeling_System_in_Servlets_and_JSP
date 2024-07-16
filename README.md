@@ -39,13 +39,13 @@ The E-channeling System is a web-based application developed using Java Servlets
      - Password
 
 2. **Login and Profile Management**
-   - Patients should be able to login with valid credentials (NIC, Password).
+   - Patients should be able to log in with valid credentials (NIC, Password).
    - Patients should be able to update their personal information.
 
 3. **Appointment Booking**
-   - Patients should be able to view available channeling schedules.
+   - Patients should be able to view available channelling schedules.
    - Patients should be able to make an appointment.
-   - Each appointment should not exceed the patient count per channeling schedule.
+   - Each appointment should not exceed the patient count per channelling schedule.
 
 ### Non-Functional Requirements
 1. **Data Persistence**
