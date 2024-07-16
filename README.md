@@ -1,5 +1,7 @@
 # E-channeling System in Servlets and JSP
 
+## Overview
+The E-channeling System is a web-based application developed using Java Servlets and JSP, aimed at facilitating the appointment booking process between doctors and patients. This system allows doctors to manage their channeling schedules and patients to book appointments, view their schedules, and manage their profiles. The system ensures data persistence by storing all information in a MySQL database.
 
 ## Requirements
 
