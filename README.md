@@ -92,5 +92,14 @@ phone	VARCHAR(15)	NOT NULL
 specialization	VARCHAR(100)	NOT NULL
 
 
+## Technologies and Tools 
+- Java Servlets
+- Java Server Pages (JSP)
+- MySQL Database
+- Apache Tomcat for server deployment
+- XAMPP
+- Apache NetBeans
+
+
 ## Contributions
 Contributions to enhance the functionality and features of the e-channeling system are welcome. Please follow the standard GitHub workflow for submitting pull requests.
