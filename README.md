@@ -82,14 +82,45 @@ The E-channeling System is a web-based application developed using Java Servlets
 
 - A consistent navigation bar is provided for ease of use, allowing access to various sections like appointment lists, personal appointments, user profiles, and logout.
 
-## Database Structure
-Doctors Table
-Column	Data Type	Constraints
-userID	VARCHAR(10)	PRIMARY KEY
-name	VARCHAR(100)	NOT NULL
-password	VARCHAR(100)	NOT NULL
-phone	VARCHAR(15)	NOT NULL
-specialization	VARCHAR(100)	NOT NULL
+### Database Structure
+
+#### Doctors Table
+| Column       | Data Type     | Constraints      |
+|--------------|---------------|------------------|
+| userID       | VARCHAR(10)   | PRIMARY KEY      |
+| name         | VARCHAR(100)  | NOT NULL         |
+| password     | VARCHAR(100)  | NOT NULL         |
+| phone        | VARCHAR(15)   | NOT NULL         |
+| specialization | VARCHAR(100) | NOT NULL        |
+
+#### Patients Table
+| Column       | Data Type     | Constraints      |
+|--------------|---------------|------------------|
+| NIC          | VARCHAR(12)   | PRIMARY KEY      |
+| name         | VARCHAR(100)  | NOT NULL         |
+| password     | VARCHAR(100)  | NOT NULL         |
+| phone        | VARCHAR(15)   | NOT NULL         |
+| email        | VARCHAR(100)  | NOT NULL         |
+
+#### Channeling Schedule Table
+| Column         | Data Type   | Constraints      |
+|----------------|-------------|------------------|
+| id             | INT         | PRIMARY KEY      |
+| doctor_id      | VARCHAR(10) | FOREIGN KEY      |
+| channeling_date| DATE        | NOT NULL         |
+| time           | TIME        | NOT NULL         |
+| max_patients   | INT         | NOT NULL         |
+| current_patients | INT       | NOT NULL         |
+
+#### Appointments Table
+| Column               | Data Type   | Constraints                     |
+|----------------------|-------------|---------------------------------|
+| channeling_schedule_id | INT       | FOREIGN KEY, COMPOSITE KEY      |
+| patient_NIC          | VARCHAR(12) | FOREIGN KEY, COMPOSITE KEY      |
+| appointment_date     | DATE        | NOT NULL                        |
+| appointment_time     | TIME        | NOT NULL                        |
+| status               | VARCHAR(20) | NOT NULL                        |
+
 
 
 ## Technologies and Tools 
