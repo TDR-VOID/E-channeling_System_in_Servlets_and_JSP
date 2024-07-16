@@ -27,14 +27,24 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+           
+    
         }
         .navbar a:hover {
             background-color: #ddd;
             color: black;
         }
+        
+       .navbar a.active {
+            background-color: #f0f0f0;
+            color: black;
+        }
         .container {
             margin-top: 50px;
             padding: 20px;
+            text-align: center;
         }
         table {
             width: 100%;
@@ -61,19 +71,23 @@
         .button:hover {
             background-color: #45a049;
         }
+        .doctor-name{
+            text-align: left;
+            
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="Patient.jsp">Patient</a>
-        <a href="Patient_Appointment_List.jsp">Appointment List</a>
-        <a href="Patient_Appointments.jsp">My Appointments</a>
-        <a href="Patient_Profile.jsp">User Profile</a>
-        <a href="index.jsp">Logout</a>
+        <a href="Patient.jsp"><b>Appointments</b></a>
+        <a href="Patient_Appointment_List.jsp"><b>Full Appointment List</b></a>
+        <a href="Patient_Appointments.jsp" class='active'><b>Confirmed Appointments List</b></a>
+        <a href="Patient_ViewProfile.jsp"><b>User Profile</b></a>
+        <a href="index.jsp"><b>Logout</b></a>
     </div>
 
     <div class="container">
-        <h2>My Confirmed Appointments</h2>
+        <h1>My Confirmed Appointments</h1>
         <table>
             <tr>
                 <th>No</th>
@@ -116,7 +130,7 @@
                         out.println("<tr>");
                         out.println("<td>" + counter + "</td>");
                         out.println("<td>" + doctorID + "</td>");
-                        out.println("<td>" + doctorName + "</td>");
+                        out.println("<td class='doctor-name'>" + doctorName + "</td>");
                         out.println("<td>" + channelNumber + "</td>");
                         out.println("<td>" + date + "</td>");
                         out.println("<td>" + time + "</td>");

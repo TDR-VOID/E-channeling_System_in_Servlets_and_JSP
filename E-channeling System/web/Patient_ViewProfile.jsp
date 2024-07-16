@@ -15,7 +15,7 @@
         .navbar {
             overflow: hidden;
             background-color: #333;
-            position: fixed;
+            position: fixed; /* Fixed to the top */
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -27,9 +27,18 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+           
+    
         }
         .navbar a:hover {
             background-color: #ddd;
+            color: black;
+        }
+        
+       .navbar a.active {
+            background-color: #f0f0f0;
             color: black;
         }
         .container {
@@ -68,18 +77,22 @@
         .button:hover {
             background-color: #45a049;
         }
+        .patient-name{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="Patient.jsp">Appointment List</a>
-        <a href="Patient_Appointments.jsp">My Appointments</a>
-        <a href="Patient_ViewProfile.jsp">User Profile</a>
-        <a href="index.jsp">Logout</a>
+        <a href="Patient.jsp"><b>Appointments</b></a>
+        <a href="Patient_Appointment_List.jsp"><b>Full Appointment List</b></a>
+        <a href="Patient_Appointments.jsp"><b>Confirmed Appointments List</b></a>
+        <a href="Patient_ViewProfile.jsp" class="active"><b>User Profile</b></a>
+        <a href="index.jsp"><b>Logout</b></a>
     </div>
 
     <div class="container">
-        <h2>Patient Profile</h2>
+        <h1 class="patient-name">Patient Profile</h1>
         <div class="profile">
             <%
                 String patientNIC = (String) session.getAttribute("loggedInPatientNIC");

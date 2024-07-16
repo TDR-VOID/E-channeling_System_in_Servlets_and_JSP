@@ -84,15 +84,15 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Patient.jsp" class="active">Appointments</a>
-        <a href="Patient_Appointment_List.jsp">Full Appointment List</a>
-        <a href="Patient_Appointments.jsp">Confirmed Appointments List</a>
-        <a href="Patient_ViewProfile.jsp">User Profile</a>
-        <a href="index.jsp">Logout</a>
+        <a href="Patient.jsp" class="active"><b>Appointments</b></a>
+        <a href="Patient_Appointment_List.jsp"><b>Full Appointment List</b></a>
+        <a href="Patient_Appointments.jsp"><b>Confirmed Appointments List</b></a>
+        <a href="Patient_ViewProfile.jsp"><b>User Profile</b></a>
+        <a href="index.jsp"><b>Logout</b></a>
     </div>
 
     <div class="container">
-        <h2>Appointments List</h2>
+        <h1>Appointments List</h1>
         <table>
             <tr>
                 <th>No</th>
@@ -161,7 +161,7 @@
                   
                    // Display confirmed appointments table
                    out.println("</table>");
-                   out.println("<h2 class='spacing'>My Confirmed Appointments</h2>");
+                   out.println("<h1 class='spacing'>My Confirmed Appointments</h1>");
                    out.println("<table>");
                    out.println("<tr><th>No</th><th>Doctor ID</th><th>Doctor Name</th><th>Channel Number</th><th>Date</th><th>Time</th><th>Action</tr></tr>");
 
