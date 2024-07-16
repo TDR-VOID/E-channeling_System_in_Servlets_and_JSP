@@ -30,14 +30,7 @@
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .navbar a.active {
-            background-color: #f0f0f0;
-            color: black;
-        }
+
         .container {
             margin-top: 50px;
             padding: 20px;
@@ -72,7 +65,7 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Doctor.jsp" class="active"><b>Channeling Schedule</b></a>
+        <a href="Doctor.jsp"><b>Channeling Schedule</b></a>
         <a href="Doctor_Add.jsp"><b>Add New Schedule</b></a>
         <a href="Doctor_ViewProfile.jsp"><b>User Profile</b></a>
         <a href="index.jsp"><b>Logout</b></a>

@@ -12,6 +12,10 @@
             background-color: #f0f0f0;
             margin: 0;
         }
+        .spacing {
+        margin-top: 50px; /* Adjust the value to control the space */
+        }
+
         .navbar {
             overflow: hidden;
             background-color: #333;
@@ -27,9 +31,18 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+           
+    
         }
         .navbar a:hover {
             background-color: #ddd;
+            color: black;
+        }
+        
+       .navbar a.active {
+            background-color: #f0f0f0;
             color: black;
         }
         .container {
@@ -44,10 +57,16 @@
         th, td {
             padding: 10px;
             border: 1px solid #ddd;
+            text-align: center;
         }
         th {
             background-color: #4CAF50;
             color: white;
+        }
+        
+        .doctor-name{
+            text-align: left;
+            
         }
         .button {
             background-color: #4CAF50;
@@ -65,9 +84,9 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="Patient.jsp">Patient</a>
-        <a href="Patient_Appointment_List.jsp">Appointment List</a>
-        <a href="Patient_Appointments.jsp">My Appointments</a>
+        <a href="Patient.jsp" class="active">Appointments</a>
+        <a href="Patient_Appointment_List.jsp">Full Appointment List</a>
+        <a href="Patient_Appointments.jsp">Confirmed Appointments List</a>
         <a href="Patient_ViewProfile.jsp">User Profile</a>
         <a href="index.jsp">Logout</a>
     </div>
@@ -116,7 +135,7 @@
                        out.println("<tr>");
                        out.println("<td>" + counter + "</td>");
                        out.println("<td>" + doctorID + "</td>");
-                       out.println("<td>" + doctorName + "</td>");
+                       out.println("<td class='doctor-name'>" + doctorName + "</td>");
                        out.println("<td>" + channelNumber + "</td>");
                        out.println("<td>" + date + "</td>");
                        out.println("<td>" + time + "</td>");
@@ -139,10 +158,10 @@
                    PreparedStatement confirmedStatement = conn.prepareStatement(confirmedAppointmentsSQL);
                    confirmedStatement.setString(1, (String) session.getAttribute("loggedInPatientNIC"));
                    ResultSet confirmedRs = confirmedStatement.executeQuery();
-
+                  
                    // Display confirmed appointments table
                    out.println("</table>");
-                   out.println("<h2>My Confirmed Appointments</h2>");
+                   out.println("<h2 class='spacing'>My Confirmed Appointments</h2>");
                    out.println("<table>");
                    out.println("<tr><th>No</th><th>Doctor ID</th><th>Doctor Name</th><th>Channel Number</th><th>Date</th><th>Time</th><th>Action</tr></tr>");
 
@@ -153,11 +172,11 @@
                        int channelNumber = confirmedRs.getInt("id");
                        String date = confirmedRs.getString("channeling_date");
                        String time = confirmedRs.getString("time");
-
+                       
                        out.println("<tr>");
                        out.println("<td>" + confirmedCounter + "</td>");
                        out.println("<td>" + doctorID + "</td>");
-                       out.println("<td>" + doctorName + "</td>");
+                       out.println("<td class='doctor-name'>" + doctorName + "</td>");
                        out.println("<td>" + channelNumber + "</td>");
                        out.println("<td>" + date + "</td>");
                        out.println("<td>" + time + "</td>");
