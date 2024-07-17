@@ -23,32 +23,32 @@ Screenshots of the key pages in the E-Channeling System:
 
 <details>
 <summary>Doctor Channeling Schedule Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Doctor Channeling Schedule Page" width="800" />
+<img src="screenshots/doctor_channeling_schedule.png" alt="Doctor Channeling Schedule Page" width="800" />
 </details>
 
 <details>
 <summary>Doctor Add New Schedule Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Doctor Add New Schedule Page" width="800" />
+<img src="screenshots/doctor_add_new_schedule.png" alt="Doctor Add New Schedule Page" width="800" />
 </details>
 
 <details>
 <summary>Doctor Update Channeling Schedule Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Doctor Update Channeling Schedule Page" width="800" />
+<img src="screenshots/doctor_update_uhanneling_schedule.png" alt="Doctor Update Channeling Schedule Page" width="800" />
 </details>
 
 <details>
 <summary>Doctor Delete Schedule Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Doctor Delete Schedule Page" width="800" />
+<img src="screenshots/doctor_delete_schedule.png" alt="Doctor Delete Schedule Page" width="800" />
 </details>
 
 <details>
 <summary>Doctor User Profile Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Doctor User Profile Page" width="800" />
+<img src="screenshots/doctor_user_profile.png" alt="Doctor User Profile Page" width="800" />
 </details>
 
 <details>
 <summary>Doctor Edit User Profile Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Doctor Edit User Profile Page" width="800" />
+<img src="screenshots/doctor_rdit_user_profile.png" alt="Doctor Edit User Profile Page" width="800" />
 </details>
 <details>
 <summary>Patient Login Page</summary></summary>
