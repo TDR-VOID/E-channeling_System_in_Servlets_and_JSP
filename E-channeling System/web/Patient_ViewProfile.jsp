@@ -92,7 +92,7 @@
     </div>
 
     <div class="container">
-        <h1 class="patient-name">Patient Profile</h1>
+        <h1 class="patient-name">View Patient Profile</h1>
         <div class="profile">
             <%
                 String patientNIC = (String) session.getAttribute("loggedInPatientNIC");
