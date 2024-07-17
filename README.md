@@ -20,11 +20,6 @@ Here are screenshots of key pages in the E-Channeling System:
 <img src="screenshots/doctor_register.png" alt="Doctor Register Page" width="800" />
 </details>
 
-
-
-### Doctor Register Page
-![Doctor Register Page](screenshots/doctor_register.png)
-
 ### Doctor Channeling Schedule Page
 
 ### Doctor Add New Schedule Page
