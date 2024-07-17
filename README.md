@@ -46,6 +46,10 @@ Here are screenshots of key pages in the E-Channeling System:
 </details>
 
 <details>
+<summary>Doctor Edit User Profile Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Doctor Edit User Profile Page" width="800" />
+</details>
+<details>
 <summary>Patient Login Page</summary></summary>
 <img src="screenshots/doctor_register.png" alt="Patient Login Page" width="800" />
 </details>
@@ -73,6 +77,11 @@ Here are screenshots of key pages in the E-Channeling System:
 <details>
 <summary>Patient User Profile Page</summary></summary>
 <img src="screenshots/doctor_register.png" alt="Patient User Profile Page" width="800" />
+</details>
+
+<details>
+<summary>Patient Edit User Profile Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Patient Edit User Profile Page" width="800" />
 </details>
 
 <details>
