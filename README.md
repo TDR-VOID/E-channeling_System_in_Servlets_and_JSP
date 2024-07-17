@@ -95,7 +95,7 @@ Screenshots of the key pages in the E-Channeling System:
 <img src="screenshots/patient_cancel_appointment.png" alt="Patient Cancel Appointment Page" width="800" />
 </details>
 
-
+<br>
 ## Requirements
 
 ### Functional Requirements
