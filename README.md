@@ -8,15 +8,19 @@ Here are screenshots of key pages in the E-Channeling System:
 <details>
 <summary><h3>Welcome Page</summary></h3></summary>
 <img src="screenshots/welcome_page.png" alt="Welcome Page" width="800" />
+</details>
 
+<details>
+<summary><h3>Doctor Login Page</summary></h3></summary>
+<img src="screenshots/doctor_login.png" alt="Doctor Login Page" width="800" />
+</details>
+
+<details>
+<summary><h3>Doctor Register Page</summary></h3></summary>
+<img src="screenshots/doctor_register.png" alt="Doctor Register Page" width="800" />
 </details>
 
 
-### Welcome Page
-![Welcome Page](screenshots/welcome_page.png)
-
-### Doctor Login Page
-![Doctor Login Page](screenshots/doctor_login.png)
 
 ### Doctor Register Page
 ![Doctor Register Page](screenshots/doctor_register.png)
