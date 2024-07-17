@@ -152,9 +152,8 @@ Screenshots of the key pages in the E-Channeling System:
 
 ## Features
 1. Doctor Registration and Profile Management:
-- egeg
-   - Doctors can register with a unique UserID, name, password, phone, and specialization.
-   - After logging in, doctors can update their phone number and specialization.
+- Doctors can register with a unique UserID, name, password, phone, and specialization.
+- After logging in, doctors can update their phone number and specialization.
   
 2. Doctor Schedule Management:
 
