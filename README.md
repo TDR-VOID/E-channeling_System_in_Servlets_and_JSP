@@ -14,6 +14,33 @@ Here are screenshots of key pages in the E-Channeling System:
 ### Doctor Register Page
 ![Doctor Register Page](screenshots/doctor_register.png)
 
+### Doctor Channeling Schedule Page
+
+### Doctor Add New Schedule Page
+
+### Doctor Update Channeling Schedule Page
+
+### Doctor Delete Schedule Page
+
+### Doctor User Profile Page
+
+### Patient Login Page
+
+### Patient Register Page
+
+### Patient Appointment List View Page
+
+### Full Appointment List View Page
+
+### Confirmed Appointment List View Page
+
+### Patient User Profile Page
+
+### Patient Confirm Appointment Page
+
+### Patient Cancel Appointment Page
+
+
 
 ## Requirements
 
