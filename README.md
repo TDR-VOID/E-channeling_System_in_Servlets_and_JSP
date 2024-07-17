@@ -186,6 +186,7 @@ The database for the E-channeling System is designed to manage information for d
 - Appointments Table: Records the appointments made by patients, including channelling schedule ID, patient NIC, appointment date, appointment time, and status.
 
 #### Doctors Table
+
 | Column       | Data Type     | Constraints      |
 |--------------|---------------|------------------|
 | userID       | VARCHAR(10)   | PRIMARY KEY      |
