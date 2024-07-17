@@ -139,7 +139,7 @@ Screenshots of the key pages in the E-Channeling System:
 3. **Appointment Booking**
    - Patients should be able to view available channelling schedules.
    - Patients should be able to make an appointment.
-   - Each appointment should not exceed the patient count per channelling schedule.
+   - Each appointment should not exceed the patient count per the channelling schedule.
 
 ### Non-Functional Requirements
 1. **Data Persistence**
@@ -222,6 +222,7 @@ The database for the E-channeling System is designed to manage information for d
 | appointment_time     | TIME        | NOT NULL                        |
 | status               | VARCHAR(20) | NOT NULL                        |
 
+<br>
 
 ## Database Setup
 To set up the database for the E-channeling System, follow these steps:
@@ -286,6 +287,7 @@ CREATE TABLE appointments (
 ```
 Follow these steps to set up your database, and you'll be ready to deploy the E-channeling System.
 
+<br>
 
 ## Technologies and Tools 
 - Java Servlets
@@ -295,6 +297,7 @@ Follow these steps to set up your database, and you'll be ready to deploy the E-
 - XAMPP
 - Apache NetBeans
 
+<br>
 
 ## Contributions
 Contributions to enhance the functionality and features of the e-channeling system are welcome. Please follow the standard GitHub workflow for submitting pull requests.
