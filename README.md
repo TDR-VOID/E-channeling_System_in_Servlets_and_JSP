@@ -148,6 +148,7 @@ Screenshots of the key pages in the E-Channeling System:
 2. **User Interfaces**
    - User interfaces should be created using Java Servlets or Java Server Pages (JSP).
   
+<br>
 
 ## Features
 1. Doctor Registration and Profile Management:
