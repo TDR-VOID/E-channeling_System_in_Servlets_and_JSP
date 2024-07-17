@@ -11,7 +11,7 @@ Here are screenshots of key pages in the E-Channeling System:
 </details>
 
 <details>
-<summary>Doctor Login Page> </summary>
+<summary>Doctor Login Page </summary>
 <img src="screenshots/doctor_login.png" alt="Doctor Login Page" width="800" />
 </details>
    
