@@ -7,7 +7,7 @@ Here are screenshots of key pages in the E-Channeling System:
 
 <details>
 <summary><h3>Welcome Page</summary></h3></summary>
-<img src="screenshots/welcome_page.png" alt="Welcome Page" width="300" />
+<img src="screenshots/welcome_page.png" alt="Welcome Page" width="800" />
 
 </details>
 
