@@ -131,7 +131,7 @@
             }
         %>
         <div class="button-container">
-            <a href="confirm_booking.jsp?id=<%=channelNumber%>" class="button">Confirm Booking</a>
+            <a href="confirm_booking.jsp?id=<%=channelNumber%>" class="button">Confirm Appointment</a>
             <a href="Patient.jsp" class="button">Cancel</a>
         </div>
     </div>

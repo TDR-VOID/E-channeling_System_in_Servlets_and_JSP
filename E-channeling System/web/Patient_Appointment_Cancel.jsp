@@ -24,9 +24,22 @@
         h2 {
             text-align: center;
         }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
         .button {
             display: block;
-            width: 100%;
             padding: 10px;
             text-align: center;
             background-color: #4CAF50;
@@ -34,15 +47,20 @@
             text-decoration: none;
             border-radius: 4px;
             margin-bottom: 10px;
+            flex: 1;
+            text-align: center;
         }
         .button:hover {
             background-color: #45a049;
+        }
+        .title {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Cancel Appointment</h2>
+        <h1 class="title">Cancel Appointment</h1>
         <%
             String channelNumber = request.getParameter("id");
             String patientID = (String)session.getAttribute("loggedInPatientNIC");
@@ -87,8 +105,10 @@
                     out.println("<h3>Patient NIC: "+ patientID + "</h3>");
 
                     // Display confirmation buttons
+                    out.println("<div class='button-container'>");
                     out.println("<a href='confirm_cancel.jsp?id=" + channelNumber + "' class='button'>Confirm Cancellation</a>");
-                    out.println("<a href='Patient_Appoinments.jsp' class='button'>Go Back</a>");
+                    out.println("<a href='Patient_Appointments.jsp' class='button'>Go Back</a>");
+                    out.println("</div>");
                 }
 
                 rs.close();
