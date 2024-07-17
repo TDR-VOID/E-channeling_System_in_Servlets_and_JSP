@@ -61,6 +61,8 @@
 <body>
     <div class="container">
         <h1 class="title">Cancel Appointment</h1>
+        <br>
+
         <%
             String channelNumber = request.getParameter("id");
             String patientID = (String)session.getAttribute("loggedInPatientNIC");
