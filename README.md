@@ -5,6 +5,13 @@ The E-channeling System is a web-based application developed using Java Servlets
 
 Here are screenshots of key pages in the E-Channeling System:
 
+<details>
+<summary>Welcome Page</summary>
+<img src="screenshots/welcome_page.png" alt="Welcome Page" width="300" />
+
+</details>
+
+
 ### Welcome Page
 ![Welcome Page](screenshots/welcome_page.png)
 
