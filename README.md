@@ -52,47 +52,47 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
 <details>
 <summary>Patient Login Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Patient Login Page" width="800" />
+<img src="screenshots/patient_login.png" alt="Patient Login Page" width="800" />
 </details>
 
 <details>
 <summary>Patient Register Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Patient Register Page" width="800" />
+<img src="screenshots/patient_register.png" alt="Patient Register Page" width="800" />
 </details>
 
 <details>
 <summary>Patient Appointment List View Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Patient Appointment List View Page" width="800" />
+<img src="screenshots/patient_appointment_list_view.png" alt="Patient Appointment List View Page" width="800" />
 </details>
 
 <details>
 <summary>Full Appointment List View Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Full Appointment List View Page" width="800" />
+<img src="screenshots/full_appointment_list.png" alt="Full Appointment List View Page" width="800" />
 </details>
 
 <details>
-<summary>Confirmed Appointment List View Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Confirmed Appointment List View Page" width="800" />
+<summary>Patient Confirmed Appointment List View Page</summary></summary>
+<img src="screenshots/patient_confirmed_appointment_list.png" alt="Confirmed Appointment List View Page" width="800" />
 </details>
 
 <details>
 <summary>Patient User Profile Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Patient User Profile Page" width="800" />
+<img src="screenshots/patient_user_profile.png" alt="Patient User Profile Page" width="800" />
 </details>
 
 <details>
 <summary>Patient Edit User Profile Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Patient Edit User Profile Page" width="800" />
+<img src="screenshots/patient_edit_user_profile.png" alt="Patient Edit User Profile Page" width="800" />
 </details>
 
 <details>
 <summary>Patient Confirm Appointment Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Patient Confirm Appointment Page" width="800" />
+<img src="screenshots/patient_confirm_appointment.png" alt="Patient Confirm Appointment Page" width="800" />
 </details>
 
 <details>
 <summary>Patient Cancel Appointment Page</summary></summary>
-<img src="screenshots/doctor_register.png" alt="Patient Cancel Appointment Page" width="800" />
+<img src="screenshots/patient_cancel_appointment.png" alt="Patient Cancel Appointment Page" width="800" />
 </details>
 
 
