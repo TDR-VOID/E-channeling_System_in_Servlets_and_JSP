@@ -293,6 +293,7 @@ Follow these steps to set up your database, and you'll be ready to deploy the E-
 - Java Servlets
 - Java Server Pages (JSP)
 - MySQL Database
+- HTML/CSS for front-end design
 - Apache Tomcat for server deployment
 - XAMPP
 - Apache NetBeans
