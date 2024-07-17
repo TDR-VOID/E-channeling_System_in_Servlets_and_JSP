@@ -20,32 +20,70 @@ Here are screenshots of key pages in the E-Channeling System:
 <img src="screenshots/doctor_register.png" alt="Doctor Register Page" width="800" />
 </details>
 
-### Doctor Channeling Schedule Page
+<details>
+<summary>Doctor Channeling Schedule Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Doctor Channeling Schedule Page" width="800" />
+</details>
 
-### Doctor Add New Schedule Page
+<details>
+<summary>Doctor Add New Schedule Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Doctor Add New Schedule Page" width="800" />
+</details>
 
-### Doctor Update Channeling Schedule Page
+<details>
+<summary>Doctor Update Channeling Schedule Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Doctor Update Channeling Schedule Page" width="800" />
+</details>
 
-### Doctor Delete Schedule Page
+<details>
+<summary>Doctor Delete Schedule Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Doctor Delete Schedule Page" width="800" />
+</details>
 
-### Doctor User Profile Page
+<details>
+<summary>Doctor User Profile Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Doctor User Profile Page" width="800" />
+</details>
 
-### Patient Login Page
+<details>
+<summary>Patient Login Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Patient Login Page" width="800" />
+</details>
 
-### Patient Register Page
+<details>
+<summary>Patient Register Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Patient Register Page" width="800" />
+</details>
 
-### Patient Appointment List View Page
+<details>
+<summary>Patient Appointment List View Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Patient Appointment List View Page" width="800" />
+</details>
 
-### Full Appointment List View Page
+<details>
+<summary>Full Appointment List View Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Full Appointment List View Page" width="800" />
+</details>
 
-### Confirmed Appointment List View Page
+<details>
+<summary>Confirmed Appointment List View Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Confirmed Appointment List View Page" width="800" />
+</details>
 
-### Patient User Profile Page
+<details>
+<summary>Patient User Profile Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Patient User Profile Page" width="800" />
+</details>
 
-### Patient Confirm Appointment Page
+<details>
+<summary>Patient Confirm Appointment Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Patient Confirm Appointment Page" width="800" />
+</details>
 
-### Patient Cancel Appointment Page
-
+<details>
+<summary>Patient Cancel Appointment Page</summary></summary>
+<img src="screenshots/doctor_register.png" alt="Patient Cancel Appointment Page" width="800" />
+</details>
 
 
 ## Requirements
