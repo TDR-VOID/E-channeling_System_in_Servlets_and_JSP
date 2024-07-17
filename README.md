@@ -9,10 +9,10 @@ Here are screenshots of key pages in the E-Channeling System:
 ![Welcome Page](screenshots/welcome_page.png)
 
 ### Doctor Login Page
-![Doctor Login Page](screenshots/doctor_login_page.png)
+![Doctor Login Page](screenshots/doctor_login.png)
 
 ### Doctor Register Page
-![Doctor Register Page](screenshots/doctor_register_page.png)
+![Doctor Register Page](screenshots/doctor_register.png)
 
 
 ## Requirements
