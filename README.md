@@ -96,6 +96,7 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
 
 <br>
+
 ## Requirements
 
 ### Functional Requirements
