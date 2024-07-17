@@ -48,7 +48,7 @@ Screenshots of the key pages in the E-Channeling System:
 
 <details>
 <summary>Doctor Edit User Profile Page</summary></summary>
-<img src="screenshots/doctor_rdit_user_profile.png" alt="Doctor Edit User Profile Page" width="800" />
+<img src="screenshots/doctor_edit_user_profile.png" alt="Doctor Edit User Profile Page" width="800" />
 </details>
 <details>
 <summary>Patient Login Page</summary></summary>
