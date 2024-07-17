@@ -6,7 +6,7 @@ The E-channeling System is a web-based application developed using Java Servlets
 Here are screenshots of key pages in the E-Channeling System:
 
 <details>
-<summary>Welcome Page</summary>
+<summary><h3>Welcome Page</summary></h3></summary>
 <img src="screenshots/welcome_page.png" alt="Welcome Page" width="300" />
 
 </details>
