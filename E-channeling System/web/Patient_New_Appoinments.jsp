@@ -100,7 +100,7 @@
                     out.println("<table>");
                     out.println("<tr><th>Doctor ID</th><td>" + doctorID + "</td></tr>");
                     out.println("<tr><th>Doctor Name</th><td>" + doctorName + "</td></tr>");
-                    out.println("<tr><th>Channel Number</th><td>" + channelNumber + "</td></tr>");
+                    out.println("<tr><th>Channel ID</th><td>" + channelNumber + "</td></tr>");
                     out.println("<tr><th>Date</th><td>" + date + "</td></tr>");
                     out.println("<tr><th>Time</th><td>" + time + "</td></tr>");
                     out.println("<tr><th>No of tokens Available</th><td>" + token + "</td></tr>");

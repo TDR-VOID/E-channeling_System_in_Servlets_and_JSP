@@ -93,7 +93,7 @@
                 <th>No</th>
                 <th>Doctor ID</th>
                 <th>Doctor Name</th>
-                <th>Channel Number</th>
+                <th>Channel ID</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Action</th>

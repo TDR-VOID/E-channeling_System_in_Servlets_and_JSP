@@ -107,7 +107,7 @@
                 <input type="text" id="doctorID" name="doctorID" value="<%= request.getSession().getAttribute("loggedInDoctorID") %>" readonly>
             </div>
             <div class="form-group">
-                <label for="channelNumber">Channel Number:</label>
+                <label for="channelNumber">Channel ID:</label>
                 <input type="text" id="channelNumber" name="channelNumber" value="<%= request.getParameter("id") %>" readonly>
             </div>
             <div class="form-group">

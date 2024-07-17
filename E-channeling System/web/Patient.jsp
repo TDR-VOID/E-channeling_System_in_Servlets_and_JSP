@@ -98,7 +98,7 @@
                 <th>No</th>
                 <th>Doctor ID</th>
                 <th>Doctor Name</th>
-                <th>Channel Number</th>
+                <th>Channel ID</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>No of token Available</th>
@@ -163,7 +163,7 @@
                    out.println("</table>");
                    out.println("<h1 class='spacing'>My Confirmed Appointments</h1>");
                    out.println("<table>");
-                   out.println("<tr><th>No</th><th>Doctor ID</th><th>Doctor Name</th><th>Channel Number</th><th>Date</th><th>Time</th><th>Action</tr></tr>");
+                   out.println("<tr><th>No</th><th>Doctor ID</th><th>Doctor Name</th><th>Channel ID</th><th>Date</th><th>Time</th><th>Action</tr></tr>");
 
                    int confirmedCounter = 1;
                    while (confirmedRs.next()) {

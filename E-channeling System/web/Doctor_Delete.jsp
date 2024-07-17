@@ -89,7 +89,7 @@
         <table>
             <tr>
                 <th>Doctor ID</th>
-                <th>Channel Number</th>
+                <th>Channel ID</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Max Patients</th>
