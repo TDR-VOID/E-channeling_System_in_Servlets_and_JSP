@@ -304,7 +304,7 @@ Follow these steps to set up your database, and you'll be ready to deploy the E-
 ## Contributions
 Contributions to enhance the functionality and features of the e-channeling system are welcome. Please follow the standard GitHub workflow for submitting pull requests.
 
+<br>
 
 > [!NOTE]
-> All operational information for the device is detailed in the **User Manual** & **Project Report** PDF documents.
 > Ensure the MySQL JDBC driver (mysql-connector-java-...jar) is added to your project's WEB-INF/lib directory.
