@@ -128,6 +128,8 @@ Screenshots of the key pages in the E-Channeling System:
 
 - A consistent navigation bar is provided for ease of use, allowing access to various sections like appointment lists, personal appointments, user profiles, and logout.
 
+<br>
+
 ### Database Structure
 The database for the E-channeling System is designed to manage information for doctors, patients, channelling schedules, and appointments. It includes the following tables:
 
