@@ -230,6 +230,8 @@ To set up the database for the E-channeling System, follow these steps:
 <br>
 Run the following SQL command to create the database:
 
+<br>
+
 ``` SQL
 CREATE DATABASE e_channeling_system;
 ```
