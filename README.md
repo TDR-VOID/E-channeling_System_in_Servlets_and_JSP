@@ -199,7 +199,7 @@ The database for the E-channeling System is designed to manage information for d
 <details>
 <summary>Configure Apache Tomcat</summary>
   <div style="display: flex; justify-content: center;">
-  <img src="Screenshots/Servers_Window.png" alt="Configure Apache Tomcat" width="500" />
+  <img src="screenshots/Servers_Window.png" alt="Configure Apache Tomcat" width="500" />
 </div>
 </details>
 
@@ -208,22 +208,42 @@ The database for the E-channeling System is designed to manage information for d
 
 
 ### Database Setup
+
+<br>
+
 To set up the database for the E-channeling System, follow these steps:
 
-### Step 1: Create the Database
+1. Download and Install XAMPP:
+- Download XAMPP from the [official website.](https://www.apachefriends.org/download.html)
+- Follow the installation instructions provided.
+
+2. Start MySQL:
+- Open XAMPP Control Panel.
+- Start the MySQL service.
+
+3. Create and Populate the Database:
+
+- Open phpMyAdmin from the XAMPP Control Panel.
+- Create a new database named "e_channeling_system".
+<br>
 Run the following SQL command to create the database:
+
 ``` SQL
 CREATE DATABASE e_channeling_system;
 ```
+  
+- Run the following SQL queries to create and populate the tables:
 
-### Step 2: Use the Database
+<br>
+
 Switch to the newly created database:
 ``` SQL
 USE e_channeling_system;
 ```
 
-### Step 3: Create the Tables
 Run the following SQL commands to create the necessary tables:
+
+Create the Doctors Table
 ``` SQL
 CREATE TABLE doctors (
     userID VARCHAR(10) PRIMARY KEY,
@@ -268,7 +288,6 @@ CREATE TABLE appointments (
     FOREIGN KEY (patient_NIC) REFERENCES patients(NIC)
 );
 ```
-Follow these steps to set up your database, and you'll be ready to deploy the E-channeling System.
 
 <br>
 
