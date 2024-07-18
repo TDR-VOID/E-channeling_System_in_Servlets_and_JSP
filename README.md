@@ -239,8 +239,6 @@ CREATE DATABASE e_channeling_system;
   
 - Run the following SQL queries to create and populate the tables:
 
-<br>
-
 Switch to the newly created database:
 ``` SQL
 USE e_channeling_system;
