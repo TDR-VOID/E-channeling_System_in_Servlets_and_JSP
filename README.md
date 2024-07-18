@@ -176,7 +176,38 @@ The database for the E-channeling System is designed to manage information for d
 
 <br>
 
-## Database Setup
+
+## Setup
+### Initial Project Setup and Connecting Tomcat Server with NetBeans
+<br>
+
+1. Download and Install NetBeans:
+- Download the latest version of NetBeans from the [official website.](https://netbeans.apache.org/front/main/download/)
+- Follow the installation instructions provided.
+
+2. Download and Install Apache Tomcat:
+- Download Apache Tomcat from the [official website.](https://tomcat.apache.org/whichversion.html)
+- Extract the downloaded ZIP file to a preferred location on your system.
+  
+3. Configure Apache Tomcat in NetBeans:
+- Open NetBeans.
+- Go to Tools > Servers.
+- Click the "Add Server" in the Servers window.
+- Choose Apache Tomcat and specify the location of your Tomcat installation.
+- Complete the configuration by following the on-screen instructions.
+
+<details>
+<summary>Configure Apache Tomcat</summary>
+  <div style="display: flex; justify-content: center;">
+  <img src="Screenshots/Servers_Window.png" alt="Configure Apache Tomcat" width="500" />
+</div>
+</details>
+
+<br>
+
+
+
+### Database Setup
 To set up the database for the E-channeling System, follow these steps:
 
 ### Step 1: Create the Database
