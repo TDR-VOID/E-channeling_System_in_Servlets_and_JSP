@@ -242,6 +242,7 @@ USE e_channeling_system;
 ```
 
 Run the following SQL commands to create the necessary tables:
+
 Create the Doctors Table
 ``` SQL
 CREATE TABLE doctors (
