@@ -208,6 +208,9 @@ The database for the E-channeling System is designed to manage information for d
 
 
 ### Database Setup
+
+<br>
+
 To set up the database for the E-channeling System, follow these steps:
 
 1. Download and Install XAMPP:
@@ -222,6 +225,7 @@ To set up the database for the E-channeling System, follow these steps:
 
 - Open phpMyAdmin from the XAMPP Control Panel.
 - Create a new database named "e_channeling_system".
+<br>
 Run the following SQL command to create the database:
 ``` SQL
 CREATE DATABASE e_channeling_system;
@@ -229,7 +233,7 @@ CREATE DATABASE e_channeling_system;
   
 - Run the following SQL queries to create and populate the tables:
 
-
+<br>
 
 Switch to the newly created database:
 ``` SQL
