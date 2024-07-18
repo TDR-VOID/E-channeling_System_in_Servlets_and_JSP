@@ -199,7 +199,7 @@ The database for the E-channeling System is designed to manage information for d
 <details>
 <summary>Configure Apache Tomcat</summary>
   <div style="display: flex; justify-content: center;">
-  <img src="Screenshots/Servers_Window.png" alt="Configure Apache Tomcat" width="500" />
+  <img src="screenshots/Servers_Window.png" alt="Configure Apache Tomcat" width="500" />
 </div>
 </details>
 
