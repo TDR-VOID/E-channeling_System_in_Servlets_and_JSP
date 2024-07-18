@@ -95,6 +95,7 @@ Screenshots of the key pages in the E-Channeling System:
 <img src="screenshots/patient_cancel_appointment.png" alt="Patient Cancel Appointment Page" width="800" />
 </details>
 
+<br>
 
 ## Requirements
 
@@ -138,7 +139,7 @@ Screenshots of the key pages in the E-Channeling System:
 3. **Appointment Booking**
    - Patients should be able to view available channelling schedules.
    - Patients should be able to make an appointment.
-   - Each appointment should not exceed the patient count per channelling schedule.
+   - Each appointment should not exceed the patient count per the channelling schedule.
 
 ### Non-Functional Requirements
 1. **Data Persistence**
@@ -147,6 +148,7 @@ Screenshots of the key pages in the E-Channeling System:
 2. **User Interfaces**
    - User interfaces should be created using Java Servlets or Java Server Pages (JSP).
   
+<br>
 
 ## Features
 1. Doctor Registration and Profile Management:
@@ -184,6 +186,7 @@ The database for the E-channeling System is designed to manage information for d
 - Appointments Table: Records the appointments made by patients, including channelling schedule ID, patient NIC, appointment date, appointment time, and status.
 
 #### Doctors Table
+
 | Column       | Data Type     | Constraints      |
 |--------------|---------------|------------------|
 | userID       | VARCHAR(10)   | PRIMARY KEY      |
@@ -220,6 +223,7 @@ The database for the E-channeling System is designed to manage information for d
 | appointment_time     | TIME        | NOT NULL                        |
 | status               | VARCHAR(20) | NOT NULL                        |
 
+<br>
 
 ## Database Setup
 To set up the database for the E-channeling System, follow these steps:
@@ -284,15 +288,23 @@ CREATE TABLE appointments (
 ```
 Follow these steps to set up your database, and you'll be ready to deploy the E-channeling System.
 
+<br>
 
 ## Technologies and Tools 
 - Java Servlets
 - Java Server Pages (JSP)
 - MySQL Database
+- HTML/CSS for front-end design
 - Apache Tomcat for server deployment
 - XAMPP
 - Apache NetBeans
 
+<br>
 
 ## Contributions
 Contributions to enhance the functionality and features of the e-channeling system are welcome. Please follow the standard GitHub workflow for submitting pull requests.
+
+<br>
+
+> [!NOTE]
+> Ensure the MySQL JDBC driver (mysql-connector-java-...jar) is added to your project's WEB-INF/lib directory.
