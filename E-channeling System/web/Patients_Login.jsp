@@ -65,7 +65,7 @@
 <body>
 <div class="container">
   <div class="image-container">
-    <img src="patient.jpg" alt="Patient Image">
+    <img src="./src/patient.jpg" alt="Patient Image">
   </div>
   <h2>Patients Login Page</h2>
   <form action="Validation.jsp" method="post">

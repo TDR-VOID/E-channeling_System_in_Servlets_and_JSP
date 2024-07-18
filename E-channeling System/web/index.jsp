@@ -59,7 +59,7 @@
         <h1>Welcome to</h1>
         <h1>E-Channeling System</h1>
         <div class="image-container">
-            <img src="img.jpg" alt="E-Channeling System">
+            <img src="./src/img.jpg" alt="E-Channeling System">
         </div>
         <a href="Doctor_Login.jsp" class="button">For Doctors</a>
         <a href="Patients_Login.jsp" class="button">For Patients</a>
