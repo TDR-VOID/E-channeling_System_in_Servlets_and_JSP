@@ -227,6 +227,7 @@ To set up the database for the E-channeling System, follow these steps:
 - Create a new database named "e_channeling_system".
 <br>
 Run the following SQL command to create the database:
+
 ``` SQL
 CREATE DATABASE e_channeling_system;
 ```
@@ -241,6 +242,7 @@ USE e_channeling_system;
 ```
 
 Run the following SQL commands to create the necessary tables:
+Create the Doctors Table
 ``` SQL
 CREATE TABLE doctors (
     userID VARCHAR(10) PRIMARY KEY,
