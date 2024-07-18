@@ -112,7 +112,7 @@
 
                     // Iterate through results and display in table rows
                     while (rs.next()) {
-                        int channelNumber = rs.getInt("id"); // Assuming 'id' is the auto-incremented channel number
+                        int channelNumber = rs.getInt("id");
                         String date = rs.getString("channeling_date");
                         String time = rs.getString("time");
                         int maxPatients = rs.getInt("max_patients");
