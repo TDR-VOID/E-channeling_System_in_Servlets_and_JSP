@@ -310,4 +310,4 @@ Contributions to enhance the functionality and features of the e-channeling syst
 <br>
 
 > [!NOTE]
-> Ensure the MySQL JDBC driver (mysql-connector-java-...jar) is added to your project's WEB-INF/lib directory.
+> Ensure the MySQL JDBC driver (mysql-connector-java-...jar) is added to your project's "WEB-INF/lib" directory.
