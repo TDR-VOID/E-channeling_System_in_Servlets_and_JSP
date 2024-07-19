@@ -73,7 +73,7 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
 
 <details>
-<summary>Patient Confirmed Appointment List View Page</summary></summary>
+<summary>Patient Confirmed Appointment List View Page</summary>
 <img src="screenshots/patient_confirmed_appointment_list.png" alt="Confirmed Appointment List View Page" width="800" />
 </details>
 
@@ -83,17 +83,17 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
 
 <details>
-<summary>Patient Edit User Profile Page</summary></summary>
+<summary>Patient Edit User Profile Page</summary>
 <img src="screenshots/patient_edit_user_profile.png" alt="Patient Edit User Profile Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Confirm Appointment Page</summary></summary>
+<summary>Patient Confirm Appointment Page</summary>
 <img src="screenshots/patient_confirm_appointment.png" alt="Patient Confirm Appointment Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Cancel Appointment Page</summary></summary>
+<summary>Patient Cancel Appointment Page</summary>
 <img src="screenshots/patient_cancel_appointment.png" alt="Patient Cancel Appointment Page" width="800" />
 </details>
 
@@ -137,6 +137,12 @@ The database for the E-channeling System is designed to manage information for d
 - Patients Table: Contains patient details such as NIC, name, password, phone, and email.
 - Channeling Schedule Table: Manages the scheduling of doctor appointments, including details like doctor ID, channelling date, time, maximum patients allowed, and the current number of patients.
 - Appointments Table: Records the appointments made by patients, including channelling schedule ID, patient NIC, appointment date, appointment time, and status.
+
+<details>
+<summary>Database Structure</summary>
+<img src="screenshots/Database_Structure.png" alt="Database Structure" width="800" />
+</details>
+Database_Structur
 
 #### Doctors Table
 
