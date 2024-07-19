@@ -101,6 +101,20 @@ Screenshots of the key pages in the E-Channeling System:
 
 <br>
 
+## Use Case Diagram & Class Diagram
+<details>
+<summaryUse Case Diagram</summary>
+<img src="screenshots/Use_Case_Diagram.png" alt="Use Case Diagram" width="800" />
+</details>
+   
+<details>
+<summary>Class Diagram</summary>
+<img src="screenshots/Class_Diagram.png" alt="Class Diagram" width="800" />
+</details>
+
+<br>
+
+
 ## Features
 1. Doctor Registration and Profile Management:
 - Doctors can register with a unique UserID, name, password, phone, and specialization.
