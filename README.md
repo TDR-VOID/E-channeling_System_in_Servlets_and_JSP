@@ -102,6 +102,7 @@ Screenshots of the key pages in the E-Channeling System:
 <br>
 
 ## Use Case Diagram & Class Diagram
+
 <details>
 <summary>Use Case Diagram</summary>
 <img src="screenshots/Use_Case_Diagram.png" alt="Use Case Diagram" width="600" />
