@@ -19,51 +19,51 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
    
 <details>
-<summary>Doctor Register Page</summary></summary>
+<summary>Doctor Register Page</summary>
 <img src="screenshots/doctor_register.png" alt="Doctor Register Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Channeling Schedule Page</summary></summary>
+<summary>Doctor Channeling Schedule Page</summary>
 <img src="screenshots/doctor_channeling_schedule.png" alt="Doctor Channeling Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Add New Schedule Page</summary></summary>
+<summary>Doctor Add New Schedule Page</summary>
 <img src="screenshots/doctor_add_new_schedule.png" alt="Doctor Add New Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Update Channeling Schedule Page</summary></summary>
+<summary>Doctor Update Channeling Schedule Page</summary>
 <img src="screenshots/doctor_update_uhanneling_schedule.png" alt="Doctor Update Channeling Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Delete Schedule Page</summary></summary>
+<summary>Doctor Delete Schedule Page</summary>
 <img src="screenshots/doctor_delete_schedule.png" alt="Doctor Delete Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor User Profile Page</summary></summary>
+<summary>Doctor User Profile Page</summary>
 <img src="screenshots/doctor_user_profile.png" alt="Doctor User Profile Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Edit User Profile Page</summary></summary>
+<summary>Doctor Edit User Profile Page</summary>
 <img src="screenshots/doctor_edit_user_profile.png" alt="Doctor Edit User Profile Page" width="800" />
 </details>
 <details>
-<summary>Patient Login Page</summary></summary>
+<summary>Patient Login Page</summary>
 <img src="screenshots/patient_login.png" alt="Patient Login Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Register Page</summary></summary>
+<summary>Patient Register Page</summary>
 <img src="screenshots/patient_register.png" alt="Patient Register Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Appointment List View Page</summary></summary>
+<summary>Patient Appointment List View Page</summary>
 <img src="screenshots/patient_appointment_list_view.png" alt="Patient Appointment List View Page" width="800" />
 </details>
 
