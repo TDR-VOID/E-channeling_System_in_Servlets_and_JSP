@@ -68,7 +68,7 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
 
 <details>
-<summary>Full Appointment List View Page</summary></summary>
+<summary>Full Appointment List View Page</summary>
 <img src="screenshots/full_appointment_list.png" alt="Full Appointment List View Page" width="800" />
 </details>
 
@@ -78,7 +78,7 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
 
 <details>
-<summary>Patient User Profile Page</summary></summary>
+<summary>Patient User Profile Page</summary>
 <img src="screenshots/patient_user_profile.png" alt="Patient User Profile Page" width="800" />
 </details>
 
@@ -142,7 +142,6 @@ The database for the E-channeling System is designed to manage information for d
 <summary>Database Structure</summary>
 <img src="screenshots/Database_Structure.png" alt="Database Structure" width="800" />
 </details>
-Database_Structur
 
 #### Doctors Table
 
