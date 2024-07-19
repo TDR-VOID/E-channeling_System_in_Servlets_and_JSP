@@ -19,87 +19,101 @@ Screenshots of the key pages in the E-Channeling System:
 </details>
    
 <details>
-<summary>Doctor Register Page</summary></summary>
+<summary>Doctor Register Page</summary>
 <img src="screenshots/doctor_register.png" alt="Doctor Register Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Channeling Schedule Page</summary></summary>
+<summary>Doctor Channeling Schedule Page</summary>
 <img src="screenshots/doctor_channeling_schedule.png" alt="Doctor Channeling Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Add New Schedule Page</summary></summary>
+<summary>Doctor Add New Schedule Page</summary>
 <img src="screenshots/doctor_add_new_schedule.png" alt="Doctor Add New Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Update Channeling Schedule Page</summary></summary>
+<summary>Doctor Update Channeling Schedule Page</summary>
 <img src="screenshots/doctor_update_uhanneling_schedule.png" alt="Doctor Update Channeling Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Delete Schedule Page</summary></summary>
+<summary>Doctor Delete Schedule Page</summary>
 <img src="screenshots/doctor_delete_schedule.png" alt="Doctor Delete Schedule Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor User Profile Page</summary></summary>
+<summary>Doctor User Profile Page</summary>
 <img src="screenshots/doctor_user_profile.png" alt="Doctor User Profile Page" width="800" />
 </details>
 
 <details>
-<summary>Doctor Edit User Profile Page</summary></summary>
+<summary>Doctor Edit User Profile Page</summary>
 <img src="screenshots/doctor_edit_user_profile.png" alt="Doctor Edit User Profile Page" width="800" />
 </details>
 <details>
-<summary>Patient Login Page</summary></summary>
+<summary>Patient Login Page</summary>
 <img src="screenshots/patient_login.png" alt="Patient Login Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Register Page</summary></summary>
+<summary>Patient Register Page</summary>
 <img src="screenshots/patient_register.png" alt="Patient Register Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Appointment List View Page</summary></summary>
+<summary>Patient Appointment List View Page</summary>
 <img src="screenshots/patient_appointment_list_view.png" alt="Patient Appointment List View Page" width="800" />
 </details>
 
 <details>
-<summary>Full Appointment List View Page</summary></summary>
+<summary>Full Appointment List View Page</summary>
 <img src="screenshots/full_appointment_list.png" alt="Full Appointment List View Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Confirmed Appointment List View Page</summary></summary>
+<summary>Patient Confirmed Appointment List View Page</summary>
 <img src="screenshots/patient_confirmed_appointment_list.png" alt="Confirmed Appointment List View Page" width="800" />
 </details>
 
 <details>
-<summary>Patient User Profile Page</summary></summary>
+<summary>Patient User Profile Page</summary>
 <img src="screenshots/patient_user_profile.png" alt="Patient User Profile Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Edit User Profile Page</summary></summary>
+<summary>Patient Edit User Profile Page</summary>
 <img src="screenshots/patient_edit_user_profile.png" alt="Patient Edit User Profile Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Confirm Appointment Page</summary></summary>
+<summary>Patient Confirm Appointment Page</summary>
 <img src="screenshots/patient_confirm_appointment.png" alt="Patient Confirm Appointment Page" width="800" />
 </details>
 
 <details>
-<summary>Patient Cancel Appointment Page</summary></summary>
+<summary>Patient Cancel Appointment Page</summary>
 <img src="screenshots/patient_cancel_appointment.png" alt="Patient Cancel Appointment Page" width="800" />
 </details>
 
 
 
 <br>
+
+## Use Case Diagram & Class Diagram
+<details>
+<summaryUse Case Diagram</summary>
+<img src="screenshots/Use_Case_Diagram.png" alt="Use Case Diagram" width="800" />
+</details>
+   
+<details>
+<summary>Class Diagram</summary>
+<img src="screenshots/Class_Diagram.png" alt="Class Diagram" width="800" />
+</details>
+
+<br>
+
 
 ## Features
 1. Doctor Registration and Profile Management:
@@ -137,6 +151,11 @@ The database for the E-channeling System is designed to manage information for d
 - Patients Table: Contains patient details such as NIC, name, password, phone, and email.
 - Channeling Schedule Table: Manages the scheduling of doctor appointments, including details like doctor ID, channelling date, time, maximum patients allowed, and the current number of patients.
 - Appointments Table: Records the appointments made by patients, including channelling schedule ID, patient NIC, appointment date, appointment time, and status.
+
+<details>
+<summary>Database Structure</summary>
+<img src="screenshots/Database_Structure.png" alt="Database Structure" width="800" />
+</details>
 
 #### Doctors Table
 
