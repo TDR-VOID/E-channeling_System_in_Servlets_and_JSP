@@ -7,7 +7,6 @@ For detailed project requirements, please refer to the [E-channeling System Requ
 
 Screenshots of the key pages in the E-Channeling System:
 
-
 <details>
 <summary>Welcome Page</summary>
 <img src="screenshots/welcome_page.png" alt="Welcome Page" width="800" />
