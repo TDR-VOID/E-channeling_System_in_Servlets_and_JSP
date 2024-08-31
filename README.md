@@ -328,7 +328,14 @@ CREATE TABLE appointments (
 ## Contributions
 Contributions to enhance the functionality and features of the e-channeling system are welcome. Please follow the standard GitHub workflow for submitting pull requests.
 
-<br>
+<be>
+
+
+## License
+
+[MIT License](LICENSE)
+
+
 
 > [!NOTE]
 > Ensure the MySQL JDBC driver (mysql-connector-java-...jar) is added to your project's "WEB-INF/lib" directory.
